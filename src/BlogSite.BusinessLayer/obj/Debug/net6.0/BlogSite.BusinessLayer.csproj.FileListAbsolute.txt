@@ -1,0 +1,12 @@
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Debug\net6.0\BlogSite.BusinessLayer.deps.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Debug\net6.0\BlogSite.BusinessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Debug\net6.0\BlogSite.BusinessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.AssemblyInfo.cs
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\refint\BlogSite.BusinessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\ref\BlogSite.BusinessLayer.dll

@@ -1,0 +1,12 @@
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\bin\Debug\net6.0\BlogSite.CoreLayer.deps.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\bin\Debug\net6.0\BlogSite.CoreLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\bin\Debug\net6.0\BlogSite.CoreLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\BlogSite.CoreLayer.csproj.AssemblyReference.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\BlogSite.CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\BlogSite.CoreLayer.AssemblyInfoInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\BlogSite.CoreLayer.AssemblyInfo.cs
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\BlogSite.CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\BlogSite.CoreLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\refint\BlogSite.CoreLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\BlogSite.CoreLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.CoreLayer\obj\Debug\net6.0\ref\BlogSite.CoreLayer.dll
