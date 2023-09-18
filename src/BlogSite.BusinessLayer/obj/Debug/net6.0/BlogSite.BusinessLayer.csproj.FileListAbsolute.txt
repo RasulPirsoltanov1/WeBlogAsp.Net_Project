@@ -10,3 +10,8 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\refint\BlogSite.BusinessLayer.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.pdb
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\ref\BlogSite.BusinessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Debug\net6.0\BlogSite.DataAccessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Debug\net6.0\BlogSite.EntityLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Debug\net6.0\BlogSite.DataAccessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Debug\net6.0\BlogSite.EntityLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Debug\net6.0\BlogSite.BusinessLayer.csproj.CopyComplete

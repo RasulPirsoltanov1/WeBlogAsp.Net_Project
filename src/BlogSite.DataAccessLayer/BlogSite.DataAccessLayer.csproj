@@ -25,4 +25,8 @@
     <Folder Include="Concrete\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlogSite.EntityLayer\BlogSite.EntityLayer.csproj" />
+  </ItemGroup>
+
 </Project>

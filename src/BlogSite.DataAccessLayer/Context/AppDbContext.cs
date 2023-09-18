@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BlogSite.EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,13 @@ namespace BlogSite.DataAccessLayer.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-UGCLLOE\\MSSQLSERVER2; Database=CoreBlogDb; Integrated security=true;");
-            base.OnConfiguring(optionsBuilder);
         }
+
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Blog>  Blogs{ get; set; }
+        public DbSet<Category> Categories{ get; set; }
+        public DbSet<Comment>  Comments{ get; set; }
+        public DbSet<Contact> Contacts{ get; set; }
+        public DbSet<Writer>  Writers{ get; set; }
     }
 }

@@ -12,3 +12,6 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLaye
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Debug\net6.0\BlogSite.DataAccessLayer.pdb
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Debug\net6.0\BlogSite.DataAccessLayer.genruntimeconfig.cache
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Debug\net6.0\ref\BlogSite.DataAccessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Debug\net6.0\BlogSite.EntityLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Debug\net6.0\BlogSite.EntityLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Debug\net6.0\BlogSite.DataAccessLayer.csproj.CopyComplete
