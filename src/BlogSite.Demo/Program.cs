@@ -1,5 +1,9 @@
 using BlogSite.DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
+using BlogSite.DataAccessLayer;
+using BlogSite.BusinessLayer;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +14,9 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
-
+//Layers
+builder.Services.DataAccessLayerRegistration();
+builder.Services.BusinessLayerRegistration();
 
 var app = builder.Build();
 

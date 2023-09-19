@@ -1,0 +1,53 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    var counter = 0;
+}
+
+<h3 class="tittle">Blog Posts</h3>
+<div class="inner-sec">
+    <!--left-->
+    <div class="left-blog-info-w3layouts-agileits text-left">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                counter++;
+                <div class="col-lg-4 card @(counter%4==0 || counter%7==0? "my-lg-4 my-md-1 my-0":"")">
+                    <a href="single.html">
+                        <img src="~/web/images/7.jpg" class="card-img-top img-fluid" alt="">
+                    </a>
+                    <div class="card-body">
+                        <ul class="blog-icons my-4">
+                            <li>
+                                <a href="#">
+                                    <i class="far fa-calendar-alt"></i> @item.CreateDate
+                                </a>
+                            </li>
+                            <li class="mx-2">
+                                <a href="#">
+                                    <i class="far fa-comment"></i> 21
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-eye"></i> 2000
+                                </a>
+                            </li>
+
+                        </ul>
+                        <h5 class="card-title">
+                            <a href="single.html">@item.Title</a>
+                        </h5>
+                        <p class="card-text mb-3">@item.Content.Substring(0,30)... </p>
+                        <a href="single.html" class="btn btn-primary read-m">Read More</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <!--//left-->
+    </div>
+</div>
+

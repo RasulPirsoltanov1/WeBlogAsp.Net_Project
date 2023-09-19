@@ -11,23 +11,23 @@ namespace BlogSite.DataAccessLayer.Context
 {
     public class AppDbContext : DbContext
     {
-        //private readonly IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
 
-        //public AppDbContext(IConfiguration configuration)
-        //{
-        //    _configuration = configuration;
-        //}
+        public AppDbContext(DbContextOptions options, IConfiguration configuration) : base(options)
+        {
+            _configuration = configuration;
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-UGCLLOE\\MSSQLSERVER2; Database=CoreBlogDb; Integrated security=true;");
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("Default"));
         }
 
         public DbSet<About> Abouts { get; set; }
-        public DbSet<Blog>  Blogs{ get; set; }
-        public DbSet<Category> Categories{ get; set; }
-        public DbSet<Comment>  Comments{ get; set; }
-        public DbSet<Contact> Contacts{ get; set; }
-        public DbSet<Writer>  Writers{ get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Writer> Writers { get; set; }
     }
 }
