@@ -14,6 +14,7 @@ namespace BlogSite.BusinessLayer
         public static IServiceCollection BusinessLayerRegistration(this IServiceCollection services)
         {
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IBlogService, BlogService>();
             return services;
         }
     }
