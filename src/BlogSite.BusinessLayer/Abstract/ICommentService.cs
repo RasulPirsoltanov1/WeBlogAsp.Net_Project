@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogSite.BusinessLayer.Abstract
 {
-    public interface IBlogService:IGenericService<Blog>
-    {
-        Task<List<Blog>> GetBlogsWithCategoryAsync();
-        Task<Blog> GetBlogByIdWithCommentsAsync(int id);
-    }
+	public interface ICommentService:IGenericService<Comment>
+	{
+	}
 }

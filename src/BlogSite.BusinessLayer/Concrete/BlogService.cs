@@ -17,6 +17,11 @@ namespace BlogSite.BusinessLayer.Concrete
             _blogRepository = repository;
         }
 
+        public Task<Blog> GetBlogByIdWithCommentsAsync(int id)
+        {
+            return _blogRepository.GetBlogByIdWithCommentsAsync(id);
+        }
+
         public async Task<List<Blog>> GetBlogsWithCategoryAsync()
         {
             return await _blogRepository.GetListWithCategoryAsync();

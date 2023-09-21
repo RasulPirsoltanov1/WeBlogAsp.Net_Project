@@ -1,0 +1,21 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+@model Blog
+
+
+
+
+<div class="comment-top">
+    <h4>Comments</h4>
+    @foreach (var item in Model.Comments)
+    {
+        <div class="media">
+            <img src="~/web/images/t1.jpg" alt="" class="img-fluid" />
+            <div class="media-body">
+                <h5 class="mt-0">@item.UserName</h5>
+                <p>
+                    @item.Content
+                </p>
+            </div>
+        </div>
+    }
+</div>

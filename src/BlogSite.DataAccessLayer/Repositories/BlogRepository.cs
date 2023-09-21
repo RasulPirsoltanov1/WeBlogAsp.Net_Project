@@ -13,9 +13,15 @@ namespace BlogSite.DataAccessLayer.Repositories
             _dbContext = appDbContext;
         }
 
+        public async Task<Blog> GetBlogByIdWithCommentsAsync(int id)
+        {
+            Blog blog = await _context.Include(b => b.Comments).FirstOrDefaultAsync(b => b.Id == id);
+            return blog;
+        }
+
         public async Task<List<Blog>> GetListWithCategoryAsync()
         {
-            return await _dbContext.Blogs.Include(b=>b.Category).ToListAsync();
+            return await _dbContext.Blogs.Include(b => b.Category).ToListAsync();
         }
     }
 }

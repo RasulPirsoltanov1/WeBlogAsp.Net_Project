@@ -19,7 +19,7 @@ namespace BlogSite.Demo.Controllers
         }
         public async Task<IActionResult> Detail(int id)
         {
-            return View(await _blogService.GetByIdAsync(id));
+            return View(await _blogService.GetBlogByIdWithCommentsAsync(id));
         }
     }
 }
