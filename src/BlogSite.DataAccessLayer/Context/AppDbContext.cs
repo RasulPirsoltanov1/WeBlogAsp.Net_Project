@@ -1,5 +1,6 @@
 ﻿using BlogSite.EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -29,5 +30,29 @@ namespace BlogSite.DataAccessLayer.Context
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Writer> Writers { get; set; }
-    }
+
+		public override async Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
+		{
+			// get changed or added entries 
+			var entries = ChangeTracker.Entries().Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
+
+			foreach (var entry in entries)
+			{
+				if (entry.Entity is BaseEntity baseEntity)
+				{
+					if (entry.State == EntityState.Added)
+					{
+						baseEntity.CreateDate = DateTime.Now;
+					}
+					else if (entry.State == EntityState.Modified)
+					{
+						baseEntity.UpdateDate = DateTime.Now;
+					}
+				}
+			}
+
+			// save changes
+			return await base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
+		}
+	}
 }

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Zq8vrLPmeaXjVSdjItUWXdlHYqTlDkNo5nhLBdyFjaYGJoeuXfP6FiYksmVwBkqeXre+2GaiTT8ZLg96466y7Q==",
+  "dgSpecHash": "FFuXhH6mJQ//Lr5z7g8S3B1svx6ZDxhGSCR4NegidGf52tfCze0/fFSmgNB2UM//VDeZmZJUfPW9WJCRMvJ34Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\BlogSite.Demo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\resul\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
+    "C:\\Users\\resul\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\resul\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "C:\\Users\\resul\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\resul\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\resul\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

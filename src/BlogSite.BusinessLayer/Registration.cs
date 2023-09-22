@@ -1,5 +1,8 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.BusinessLayer.Concrete;
+using BlogSite.BusinessLayer.Validation.WriterValidate;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,7 +18,11 @@ namespace BlogSite.BusinessLayer
         {
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IBlogService, BlogService>();
-            return services;
+            services.AddScoped<IWriterService, WriterService>();
+			services.AddFluentValidationAutoValidation();
+			services.AddFluentValidationClientsideAdapters();
+			services.AddValidatorsFromAssembly(typeof(WriterValidator).Assembly);
+			return services;
         }
     }
 }

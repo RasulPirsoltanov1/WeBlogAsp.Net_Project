@@ -1,6 +1,7 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.DataAccessLayer.Abstract;
 using BlogSite.EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace BlogSite.BusinessLayer.Concrete
@@ -13,6 +14,8 @@ namespace BlogSite.BusinessLayer.Concrete
         {
             _repository = repository;
         }
+
+        public DbSet<T> values => _repository._context;
 
         public async Task AddAsync(T entity)
         {

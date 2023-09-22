@@ -2,7 +2,6 @@
 {
     public class Writer : BaseEntity
     {
-        public string Title { get; set; }
         public string Name { get; set; }
         public string About { get; set; }
         public string Mail { get; set; }

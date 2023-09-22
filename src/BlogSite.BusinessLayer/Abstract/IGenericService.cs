@@ -1,4 +1,5 @@
 ﻿using BlogSite.EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace BlogSite.BusinessLayer.Abstract
 {
     public interface IGenericService<T> where T : BaseEntity
     {
+        DbSet<T> values { get; }
         Task<List<T>> GetAllAsync();
         Task<List<T>> GetByExpressionAsync(Expression<Func<T,bool>> expression);
         Task<T> GetByIdAsync(int id);
