@@ -19,7 +19,10 @@ namespace BlogSite.BusinessLayer
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<IWriterService, WriterService>();
-			services.AddFluentValidationAutoValidation();
+            services.AddScoped<ICountryService, CountryService>();
+            services.AddScoped<INewsLetterService, NewsLetterService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddFluentValidationAutoValidation();
 			services.AddFluentValidationClientsideAdapters();
 			services.AddValidatorsFromAssembly(typeof(WriterValidator).Assembly);
 			return services;

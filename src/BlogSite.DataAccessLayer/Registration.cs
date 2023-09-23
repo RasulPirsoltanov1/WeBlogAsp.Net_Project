@@ -19,6 +19,8 @@ namespace BlogSite.DataAccessLayer
             services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<IContactRepository, ContactRepository>();
             services.AddScoped<IWriterRepository, WriterRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<INewsLetterRepository, NewsLetterRepository>();
             return services;
         }
     }

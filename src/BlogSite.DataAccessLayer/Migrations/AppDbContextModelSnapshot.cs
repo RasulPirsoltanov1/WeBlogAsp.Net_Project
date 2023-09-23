@@ -57,7 +57,7 @@ namespace BlogSite.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("UpdateDate")
@@ -76,7 +76,7 @@ namespace BlogSite.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Content")
@@ -89,7 +89,7 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<string>("ThumbnaiImage")
@@ -102,9 +102,14 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("WriterId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("WriterId");
 
                     b.ToTable("Blogs");
                 });
@@ -128,7 +133,7 @@ namespace BlogSite.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("UpdateDate")
@@ -157,7 +162,7 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
@@ -201,7 +206,7 @@ namespace BlogSite.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<string>("Subject")
@@ -216,6 +221,58 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
+                });
+
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.NewsLetter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Mail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsLetters");
+                });
+
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Writer", b =>
                 {
                     b.Property<int>("Id")
@@ -225,8 +282,10 @@ namespace BlogSite.DataAccessLayer.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("About")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime2");
@@ -246,13 +305,15 @@ namespace BlogSite.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Status")
+                    b.Property<bool?>("Status")
                         .HasColumnType("bit");
 
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Writers");
                 });
@@ -261,11 +322,15 @@ namespace BlogSite.DataAccessLayer.Migrations
                 {
                     b.HasOne("BlogSite.EntityLayer.Concrete.Category", "Category")
                         .WithMany("Blogs")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
+
+                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", "Writer")
+                        .WithMany()
+                        .HasForeignKey("WriterId");
 
                     b.Navigation("Category");
+
+                    b.Navigation("Writer");
                 });
 
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Comment", b =>
@@ -279,6 +344,15 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.Navigation("Blog");
                 });
 
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Writer", b =>
+                {
+                    b.HasOne("BlogSite.EntityLayer.Concrete.Country", "Country")
+                        .WithMany("Writers")
+                        .HasForeignKey("CountryId");
+
+                    b.Navigation("Country");
+                });
+
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Blog", b =>
                 {
                     b.Navigation("Comments");
@@ -287,6 +361,11 @@ namespace BlogSite.DataAccessLayer.Migrations
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Category", b =>
                 {
                     b.Navigation("Blogs");
+                });
+
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Country", b =>
+                {
+                    b.Navigation("Writers");
                 });
 #pragma warning restore 612, 618
         }

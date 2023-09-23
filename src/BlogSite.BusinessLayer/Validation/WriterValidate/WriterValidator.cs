@@ -13,7 +13,7 @@ namespace BlogSite.BusinessLayer.Validation.WriterValidate
         public WriterValidator()
         {
             RuleFor(x => x.Name).NotNull().NotEmpty().MinimumLength(2);
-            RuleFor(x => x.About).NotNull().NotEmpty().MinimumLength(3);
+            //RuleFor(x => x.About).NotNull().NotEmpty().MinimumLength(3);
             RuleFor(x => x.Password).NotNull().NotEmpty().MinimumLength(3);
             RuleFor(x => x.Mail).EmailAddress().NotNull().NotEmpty().MinimumLength(3);
 		}

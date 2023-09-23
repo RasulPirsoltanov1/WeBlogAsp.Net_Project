@@ -7,32 +7,39 @@ namespace BlogSite.Demo.Controllers
 	public class RegisterController : Controller
 	{
 		private IWriterService _writerService;
+		ICountryService _countryService;
 
-		public RegisterController(IWriterService writerService)
+		public RegisterController(IWriterService writerService, ICountryService countryService)
 		{
 			_writerService = writerService;
+			_countryService = countryService;
 		}
 
 		[HttpGet]
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
+			ViewBag.Countries =await _countryService.GetAllAsync();
 			return View();
 		}
 		[HttpPost]
-		public async Task<IActionResult> IndexAsync(Writer writer)
+		public async Task<IActionResult> Index(Writer writer)
 		{
+			var existEmail = await _writerService.GetByExpressionAsync(w=>w.Mail==writer.Mail);
+			if(existEmail!= null) {
+				ModelState.AddModelError("", "this email has been used");
+			}
+			writer.About = "test";
+			writer.Status = true;
 			if (ModelState.IsValid)
 			{
-				writer.About = "test";
-				writer.Status = true;
 				await _writerService.AddAsync(writer);
 				return RedirectToAction("Index","Blog");
 			}
 			else
 			{
+				ViewBag.Countries = await _countryService.GetAllAsync();
 				return View();
 			}
-
 		}
 	}
 }

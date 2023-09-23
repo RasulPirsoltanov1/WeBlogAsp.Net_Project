@@ -1,0 +1,14 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+@model Blog
+<div class="tech-btm">
+    <img src="~/web/images/banner1.jpg" class="img-fluid" alt="">
+</div>
+<div class="tech-btm">
+    <h4>Sign up to our newsletter</h4>
+    <p>Pellentesque dui, non felis. Maecenas male </p>
+    <form method="post" asp-action="SubscribeMail" asp-controller="NewsLetter">
+        <input name="Id" value="@Model.Id" hidden/>
+        <input type="email" placeholder="Email" name="Mail" required="">
+        <input type="submit" value="Subscribe">
+    </form>
+</div>

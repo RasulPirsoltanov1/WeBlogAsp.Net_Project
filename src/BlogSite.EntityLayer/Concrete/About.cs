@@ -1,6 +1,6 @@
 ﻿namespace BlogSite.EntityLayer.Concrete
 {
-    public class About : BaseEntity
+	public class About : BaseEntity
     {
         public string Name { get; set; }
         public string Detail1 { get; set; }

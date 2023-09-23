@@ -12,12 +12,14 @@
 		<div class="inner-sec">
 			<div class="login p-5 bg-light mx-auto mw-100">
 				<form method="post" id="form-id">
+					<div asp-validation-summary="All" class="text-danger"></div>
 					<div class="form-row">
 						<div class="col-md-6 mb-3">
 							<label for="validationCustom01">Name</label>
 							<input type="text" class="form-control" id="validationDefault01" asp-for="Name" placeholder="" required="">
 							<span style="color:red;font-size:small;" asp-validation-for="Name"></span>
 						</div>
+						
 						<div class="col-md-6 mb-3">
 							<label for="validationCustom02">Email </label>
 							<input type="email" asp-for="Mail" class="form-control" id="validationDefault02" placeholder="" required="">
@@ -25,6 +27,18 @@
 
 						</div>
 					</div>
+				<div class="form-row">
+						<div class="col-md-12 mb-3">
+							<label for="validationCustom01">Country</label>
+							<select id="cars" asp-for="CountryId" class="form-control">
+								@foreach (var country in ViewBag.Countries)
+								{
+									<option value="@country.Id">@country.Name</option>
+								}
+							</select>
+							<span style="color:red;font-size:small;" asp-validation-for="Name"></span>
+						</div>
+				</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="exampleInputPassword1 mb-2">Password</label>
@@ -41,7 +55,7 @@
 					</div>
 					<button type="button" onclick="validatePassword()" class="btn btn-primary submit mb-4">Register</button>
 					<p>
-						<a onclick="SweetMessage()" style="border:black 1px solid;border-radius:2rem;padding:1rem; color:black; cursor:pointer;">By clicking Signup, I agree to your terms</a>
+						<a onclick="SweetMessage()" style="border-radius:2rem;padding:1rem; color:blueviolet; cursor:pointer;">By clicking Signup, I agree to your terms</a>
 					</p>
 				</form>
 			</div>
@@ -64,7 +78,7 @@
 	}
 
  	function SweetMessage(){
-		Swal.fire('we send last news and features to your email addres.')
+		Swal.fire("By clicking Signup, I agree to your terms", 'we send last news and features to your email addres.')
 	}
 </script>
 
