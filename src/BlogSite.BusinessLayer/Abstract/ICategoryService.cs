@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogSite.BusinessLayer.Abstract
 {
-    public interface ICategoryService: IGenericService<Category>
+	public interface ICategoryService: IGenericService<Category>
     {
     }
 }

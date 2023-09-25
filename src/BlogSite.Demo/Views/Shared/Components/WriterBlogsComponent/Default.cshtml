@@ -8,14 +8,14 @@
     {
         <div class="blog-grids row mb-3">
             <div class="col-md-5 blog-grid-left">
-                <a href="single.html">
+                <a asp-action="Detail" asp-controller="Blog" asp-route-Id="@item.Id">
                     <img src="~/web/images/1.jpg" class="img-fluid" alt="">
                 </a>
             </div>
             <div class="col-md-7 blog-grid-right">
 
                 <h5>
-                    <a href="single.html">@item.Title</a>
+                    <a asp-action="Detail" asp-controller="Blog" asp-route-Id="@item.Id">@item.Title</a>
                 </h5>
                 <div class="sub-meta">
                     <span>

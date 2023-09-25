@@ -1,0 +1,51 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model About
+
+<!--/banner-->
+<div class="banner-inner">
+</div>
+
+
+<!--//banner-->
+<!--/main-->
+<section class="main-content-w3layouts-agileits">
+	<div class="container">
+		<h3 class="tittle">About Us</h3>
+		<div class="row inner-sec">
+			<!--left-->
+			<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+				<div class="blog-grid-top">
+
+					<div class="blog_info_left_grid">
+						<a href="single.html">
+							<img src="~/web/images/b5.jpg" class="img-fluid" alt="">
+						</a>
+					</div>
+					<h3>
+						@Model.Name
+					</h3>
+					<p>
+						@Model.Detail1
+					</p>
+				</div>
+			</div>
+			<!--//left-->
+			<!--right-->
+			<aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+				<div class="right-blog-info text-left">
+				
+					@await Html.PartialAsync("/Views/Socials/SocialLinks.cshtml")
+					
+					@await Component.InvokeAsync("WriterBlogsComponent")
+				</div>
+
+			</aside>
+			<!--//right-->
+		</div>
+	</div>
+</section>

@@ -1,9 +1,11 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.DataAccessLayer.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogSite.Demo.Controllers
 {
+    [AllowAnonymous]
     public class BlogController : Controller
     {
         IBlogService _blogService;

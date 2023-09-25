@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlogSite.BusinessLayer.Concrete
 {
-    public class CategoryService : GenericService<Category>, ICategoryService
+	public class CategoryService : GenericService<Category>, ICategoryService
     {
         public CategoryService(ICategoryRepository repository) : base(repository)
         {

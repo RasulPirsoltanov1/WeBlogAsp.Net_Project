@@ -3,7 +3,7 @@
     <div class="top-bar_sub_w3layouts container-fluid">
         <div class="row">
             <div class="col-md-4 logo text-left">
-                <a class="navbar-brand" href="~/web/index.html">
+                <a class="navbar-brand" asp-action="Index" asp-controller="Blog">
                     <i class="fab fa-linode"></i> Weblog
                 </a>
             </div>
@@ -62,21 +62,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="~/web/index.html">
+                        <a class="nav-link" asp-action="Index" asp-controller="Blog">
                             Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/web/about.html">About</a>
+                        <a class="nav-link" asp-action="Index" asp-controller="About">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/web/about.html">Blogs</a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Blog">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="~/web/contact.html">Contact</a>
+                        <a class="nav-link" asp-action="Index" asp-controller="Contact">Contact</a>
                     </li>
-
                 </ul>
                 <form action="#" method="post" class="form-inline my-2 my-lg-0 header-search">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search here..." name="Search" required="">

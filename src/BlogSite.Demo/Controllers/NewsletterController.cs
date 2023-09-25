@@ -21,7 +21,7 @@ namespace BlogSite.Demo.Controllers
         [HttpPost]
         public async Task<IActionResult> SubscribeMail(string Mail, int Id)
         {
-            var existMail = _newsLetterService.GetByExpressionAsync(x => x.Mail == Mail);
+            var existMail =await _newsLetterService.GetByExpressionAsync(x => x.Mail == Mail);
             if (existMail == null)
             {
                 NewsLetter newsLetter = new NewsLetter()
@@ -30,9 +30,23 @@ namespace BlogSite.Demo.Controllers
                     Status = true
                 };
                 await _newsLetterService.AddAsync(newsLetter);
+                if (Id != null && Id!=0)
+                {
+                    return RedirectToAction("Detail", "Blog", new { Id = Id });
+                }
+                else
+                {
+                    return RedirectToAction("Index", "About");
+                }
+            }
+            if (Id != null && Id != 0)
+            {
                 return RedirectToAction("Detail", "Blog", new { Id = Id });
             }
-            return RedirectToAction("Detail", "Blog", new { Id = Id });
+            else
+            {
+                return RedirectToAction("Index", "About");
+            }
         }
     }
 }

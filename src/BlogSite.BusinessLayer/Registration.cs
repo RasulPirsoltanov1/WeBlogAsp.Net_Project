@@ -22,7 +22,9 @@ namespace BlogSite.BusinessLayer
             services.AddScoped<ICountryService, CountryService>();
             services.AddScoped<INewsLetterService, NewsLetterService>();
             services.AddScoped<ICommentService, CommentService>();
-            services.AddFluentValidationAutoValidation();
+            services.AddScoped<IAboutService, AboutService>();
+            services.AddScoped<IContactService, ContactService>();
+			services.AddFluentValidationAutoValidation();
 			services.AddFluentValidationClientsideAdapters();
 			services.AddValidatorsFromAssembly(typeof(WriterValidator).Assembly);
 			return services;
