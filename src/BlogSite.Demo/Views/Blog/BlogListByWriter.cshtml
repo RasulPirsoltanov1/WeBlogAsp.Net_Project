@@ -1,0 +1,48 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "BlogListByWriter";
+    Layout = "~/Views/Shared/_WriterLayoutPage.cshtml";
+}
+@model List<Blog>
+<h1>BlogListByWriter</h1>
+<a class="btn btn-success">Add New Blog</a>
+
+<table class="table">
+    <tr>
+        <th>#Id</th>
+        <th>#Title</th>
+        <th>#Created Date</th>
+        <th>#Category</th>
+        <th>#Status</th>
+        <th>#Delete</th>
+        <th>#Edit</th>
+    </tr>
+    @if (Model != null)
+    {
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Title</td>
+                <td>@(((DateTime)(x.CreateDate)).ToLongDateString())</td>
+                <td>@x.Category.Name</td>
+                <td>@x.Status</td>
+                <td><a class="btn btn-danger">Delete</a></td>
+                <td><a class="btn btn-primary">Edit</a></td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="7">
+                <a class="btn btn-danger" style="width: 100%;">Have not any blog. </a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+

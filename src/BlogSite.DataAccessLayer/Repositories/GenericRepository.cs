@@ -65,7 +65,8 @@ namespace BlogSite.DataAccessLayer.Repositories
         {
             try
             {
-                return await _context.Where(expression).ToListAsync();
+                var values = await _context.Where(expression).ToListAsync();
+                return values;
             }
             catch (Exception ex)
             {

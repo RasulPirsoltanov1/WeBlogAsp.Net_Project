@@ -1,6 +1,7 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.DataAccessLayer.Abstract;
 using BlogSite.EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
