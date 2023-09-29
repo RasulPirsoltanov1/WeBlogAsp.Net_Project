@@ -1,4 +1,5 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
+using BlogSite.BusinessLayer.Extensions;
 using BlogSite.DataAccessLayer.Abstract;
 using BlogSite.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
@@ -11,12 +12,14 @@ namespace BlogSite.Demo.Controllers
     public class BlogController : Controller
     {
         IBlogService _blogService;
+        ICategoryService _categoryService;
         IWriterService _writerService;
 
-        public BlogController(IBlogService blogService, IWriterService writerService)
+        public BlogController(IBlogService blogService, IWriterService writerService, ICategoryService categoryService)
         {
             _blogService = blogService;
             _writerService = writerService;
+            _categoryService = categoryService;
         }
 
         public async Task<IActionResult> Index()
@@ -30,12 +33,63 @@ namespace BlogSite.Demo.Controllers
         public async Task<IActionResult> BlogListByWriter(string email)
         {
             var writer = await _writerService.GetByExpressionAsync(x => x.Mail == email);
-            if(writer.Count>0)
+            if (writer.Count > 0)
             {
                 var blogs = await _blogService.values.Include(x => x.Category).Where(x => x.WriterId == writer[0].Id).ToListAsync();
                 return View(blogs);
             }
             return View();
+        }
+        [HttpGet]
+        public async Task<IActionResult> Add()
+        {
+            ViewBag.Categories = await _categoryService.GetAllAsync();
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Add(Blog blog, IFormFile formFile)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (formFile != null)
+                    {
+                        blog.Image = await formFile.UploadFileToAsync("blog", "image");
+                    }
+                    var writer = await _writerService.GetByExpressionAsync(x => x.Mail == User.Identity.Name);
+                    if (writer.Count > 0)
+                    {
+                        blog.WriterId = writer[0].Id;
+                    }
+                    else
+                    {
+                        blog.WriterId = null;
+                    }
+                    blog.Status = true;
+                    await _blogService.AddAsync(blog);
+                    return RedirectToAction("BlogListByWriter", "Blog");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", ex.Message);
+                }
+            }
+            ViewBag.Categories = await _categoryService.GetAllAsync();
+            return View();
+        }
+        public async Task<IActionResult> Delete(int Id, string email)
+        {
+            try
+            {
+                await IFormFileExtension.DeleteFileAsync((await _blogService.GetByIdAsync(Id)).Image);
+                await _blogService.DeleteAsync(Id);
+                return RedirectToAction(nameof(BlogListByWriter), new { email = email });
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

@@ -17,7 +17,7 @@
                         counter++;
                         <div class="col-lg-4 card @(counter%4==0 || counter%7==0? "my-lg-4 my-md-1 my-0":"")">
                             <a href="single.html">
-                                <img src="~/web/images/7.jpg" class="card-img-top img-fluid" alt="">
+                                <img src="@item.Image" class="card-img-top img-fluid" alt="">
                             </a>
                             <div class="card-body">
                                 <ul class="blog-icons my-4">
@@ -33,7 +33,7 @@
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i class="fas fa-eye"></i> @item.Category.Name
+                                            <i class="fas fa-eye"></i> @item.Category?.Name
                                         </a>
                                     </li>
 

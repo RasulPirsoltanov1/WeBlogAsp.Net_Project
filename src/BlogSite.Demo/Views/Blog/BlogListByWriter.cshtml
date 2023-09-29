@@ -6,7 +6,7 @@
 }
 @model List<Blog>
 <h1>BlogListByWriter</h1>
-<a class="btn btn-success">Add New Blog</a>
+<a class="btn btn-success" asp-action="Add" asp-controller="Blog">Add New Blog</a>
 
 <table class="table">
     <tr>
@@ -26,9 +26,17 @@
                 <td>@x.Id</td>
                 <td>@x.Title</td>
                 <td>@(((DateTime)(x.CreateDate)).ToLongDateString())</td>
-                <td>@x.Category.Name</td>
-                <td>@x.Status</td>
-                <td><a class="btn btn-danger">Delete</a></td>
+                <td>@x.Category?.Name</td>
+                <td>@if (@x.Status == true)
+                    {
+                        <span class="badge badge-success">active</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger">passiv</span>
+                    }
+                </td>
+                <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Blog" asp-route-Id="@x.Id" asp-route-email="@User.Identity.Name">Delete</a></td>
                 <td><a class="btn btn-primary">Edit</a></td>
             </tr>
         }
