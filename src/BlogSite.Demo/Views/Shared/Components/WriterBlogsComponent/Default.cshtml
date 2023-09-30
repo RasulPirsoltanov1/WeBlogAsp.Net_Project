@@ -9,7 +9,7 @@
         <div class="blog-grids row mb-3">
             <div class="col-md-5 blog-grid-left">
                 <a asp-action="Detail" asp-controller="Blog" asp-route-Id="@item.Id">
-                    <img src="~/web/images/1.jpg" class="img-fluid" alt="">
+                    <img src="@item.Image" class="img-fluid" alt="">
                 </a>
             </div>
             <div class="col-md-7 blog-grid-right">

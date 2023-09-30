@@ -1,0 +1,46 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_WriterLayoutPage.cshtml";
+}
+
+@model Blog
+<div class="container">
+    <h2>Create Blog</h2>
+    <div asp-validation-summary="All"></div>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Title:</label>
+            <input type="text" class="form-control" asp-for="Title">
+            <span style="color:red; font-size: 14px;" asp-validation-for="Title"></span>
+        </div>
+        <div class="form-group">
+            <label>Content:</label>
+            <textarea class="form-control" asp-for="Content"></textarea>
+            <span style="color:red; font-size: 14px;" asp-validation-for="Content"></span>
+
+        </div>
+        <div class="form-group">
+            <label>Thumbnail Image:</label>
+            <input type="text" class="form-control" asp-for="ThumbnaiImage">
+            <span style="color:red; font-size: 14px;" asp-validation-for="ThumbnaiImage"></span>
+
+        </div>
+        <div class="form-group">
+            <label>Image:</label>
+            <input type="file" class="form-control" name="formFile">
+            <span style="color:red; font-size: 14px;" asp-validation-for="Image"></span>
+
+        </div>
+        <div class="form-group">
+            <label>Category:</label>
+            <select class="form-control" asp-for="CategoryId">
+                @foreach (var item in (List<Category>)(ViewBag.Categories))
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogSite.Demo.Controllers
 {
-    [AllowAnonymous]
+   
     public class BlogController : Controller
     {
         IBlogService _blogService;
@@ -21,11 +21,12 @@ namespace BlogSite.Demo.Controllers
             _writerService = writerService;
             _categoryService = categoryService;
         }
-
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             return View(await _blogService.GetBlogsWithCategoryAsync());
         }
+        [AllowAnonymous]
         public async Task<IActionResult> Detail(int id)
         {
             return View(await _blogService.GetBlogByIdWithCommentsAsync(id));
@@ -68,7 +69,7 @@ namespace BlogSite.Demo.Controllers
                     }
                     blog.Status = true;
                     await _blogService.AddAsync(blog);
-                    return RedirectToAction("BlogListByWriter", "Blog");
+                    return RedirectToAction("BlogListByWriter", "Blog", new { email = User.Identity.Name });
                 }
                 catch (Exception ex)
                 {
@@ -90,6 +91,28 @@ namespace BlogSite.Demo.Controllers
             {
                 throw new Exception(ex.Message);
             }
+        }
+        public async Task<IActionResult> Edit(int Id)
+        {
+            ViewBag.Categories = await _categoryService.GetAllAsync();
+            var blog = await _blogService.GetByIdAsync(Id);
+            return View(blog);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(Blog blog, IFormFile formFile)
+        {
+            ViewBag.Categories = await _categoryService.GetAllAsync();
+            var dbblog = await _blogService.GetByIdAsync(blog.Id);
+            dbblog.Title = blog.Title;
+            dbblog.Content = blog.Content;
+            if (formFile != null)
+            {
+                await IFormFileExtension.DeleteFileAsync(dbblog.Image??"");
+                dbblog.Image = await formFile.UploadFileToAsync("blog", "image");
+            }
+
+            await _blogService.UpdateAsync(dbblog);
+            return RedirectToAction("BlogListByWriter", "Blog", new { email = User.Identity?.Name });
         }
     }
 }

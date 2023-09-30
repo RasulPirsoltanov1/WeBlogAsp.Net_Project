@@ -23,7 +23,7 @@
                                 <ul class="blog-icons my-4">
                                     <li>
                                         <a href="#">
-                                            <i class="far fa-calendar-alt"></i> @(((DateTime)item.CreateDate).ToString("dd-mmm-yyyy"))
+                                            <i class="far fa-calendar-alt"></i> @(item.CreateDate?.ToString("dd-MMM-yyyy"))
                                         </a>
                                     </li>
                                     <li class="mx-2">

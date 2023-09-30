@@ -245,6 +245,26 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\2da06307-ea99-4fe4-a7d8-f2cc4fac729a7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\2da06307-ea99-4fe4-a7d8-f2cc4fac729a7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png"
+    },
+    {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\6c00b682-27d7-4091-9ce3-abc5fd1d597aphoto1695237542.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\6c00b682-27d7-4091-9ce3-abc5fd1d597aphoto1695237542.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\a207ebd0-c325-4770-b105-420361c6ff28cover-image.png",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\a207ebd0-c325-4770-b105-420361c6ff28cover-image.png"
+    },
+    {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\c3d83459-deaf-470b-97dc-d874acd76a837-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\c3d83459-deaf-470b-97dc-d874acd76a837-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png"
+    },
+    {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\ecefe845-e419-4767-9a98-a452edd7128052-Blog.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\ecefe845-e419-4767-9a98-a452edd7128052-Blog.jpg"
+    },
+    {
       "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\web\\about.html",
       "PackagePath": "staticwebassets\\web\\about.html"
     },

@@ -37,7 +37,7 @@
                     }
                 </td>
                 <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Blog" asp-route-Id="@x.Id" asp-route-email="@User.Identity.Name">Delete</a></td>
-                <td><a class="btn btn-primary">Edit</a></td>
+                <td><a class="btn btn-primary" asp-action="Edit" asp-controller="Blog" asp-route-Id="@x.Id">Edit</a></td>
             </tr>
         }
     }
