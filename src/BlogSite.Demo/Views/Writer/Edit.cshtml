@@ -1,0 +1,62 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_WriterLayoutPage.cshtml";
+}
+@model Writer
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic form elements</h4>
+            <p class="card-description"> Basic form elements </p>
+            <form class="forms-sample" method="post" asp-action="Edit" asp-controller="Writer" enctype="multipart/form-data">
+                <div class="form-group">
+                    <img src="~/@Model.Image" style="width:200px;height:200px; border-radius:20px;" />
+                    <label style="display:block;">File upload</label>
+                    <input type="file" name="image" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Name</label>
+                    <input type="text" class="form-control" asp-for="Name" id="exampleInputName1" placeholder="Name">
+                    <span style="color:red;font-size:14px;" asp-validation-for="Name"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" asp-for="Mail" id="exampleInputEmail3" placeholder="Email">
+                    <span style="color:red;font-size:14px;" asp-validation-for="Mail"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Password</label>
+                    <input type="password" class="form-control" asp-for="Password" value="@Model.Password" id="exampleInputEmail3" placeholder="Password">
+                    <span style="color:red;font-size:14px;" asp-validation-for="Password"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleSelectGender">Gender</label>
+                    <select class="form-control" asp-for="CountryId" id="exampleSelectGender">
+                        @foreach (var item in (List<Country>)ViewBag.Countries)
+                        {
+                            <option value="@item.Id"> @item.Name</option>
+                        }
+                    </select>
+                    <span style="color:red;font-size:14px;" asp-validation-for="CountryId"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleTextarea1">About</label>
+                    <textarea class="form-control" asp-for="About" id="exampleTextarea1" rows="4"></textarea>
+                    <span style="color:red;font-size:14px;" asp-validation-for="About"></span>
+
+                </div>
+                <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/writer/assets/js/file-upload.js"></script>

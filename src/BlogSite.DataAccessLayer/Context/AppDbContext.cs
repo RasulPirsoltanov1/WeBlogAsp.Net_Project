@@ -32,6 +32,7 @@ namespace BlogSite.DataAccessLayer.Context
 		public DbSet<Writer> Writers { get; set; }
 		public DbSet<Country> Countries { get; set; }
 		public DbSet<NewsLetter> NewsLetters{ get; set; }
+		public DbSet<BlogRaiting> BlogRaitings{ get; set; }
 
 
 

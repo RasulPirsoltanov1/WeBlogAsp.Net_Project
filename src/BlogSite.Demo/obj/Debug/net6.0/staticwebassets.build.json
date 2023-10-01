@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VLaCs8L6gcxChzEnORG/apv+2GsTK1NwjJDtx06pEz0=",
+  "Hash": "uNnU/L9yAGOGZlm4lkEiqpgrXY0GuGqvKyVFa9HVcJM=",
   "Source": "BlogSite.Demo",
   "BasePath": "_content/BlogSite.Demo",
   "Mode": "Default",
@@ -1154,6 +1154,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\ecefe845-e419-4767-9a98-a452edd7128052-Blog.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg",
+      "SourceId": "BlogSite.Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
+      "BasePath": "_content/BlogSite.Demo",
+      "RelativePath": "uploads/blog/image/faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png",
+      "SourceId": "BlogSite.Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
+      "BasePath": "_content/BlogSite.Demo",
+      "RelativePath": "uploads/writers/profilImages/01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\writers\\profilImages\\01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\web\\about.html",

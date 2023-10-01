@@ -265,6 +265,14 @@
       "PackagePath": "staticwebassets\\uploads\\blog\\image\\ecefe845-e419-4767-9a98-a452edd7128052-Blog.jpg"
     },
     {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png",
+      "PackagePath": "staticwebassets\\uploads\\writers\\profilImages\\01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png"
+    },
+    {
       "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\web\\about.html",
       "PackagePath": "staticwebassets\\web\\about.html"
     },

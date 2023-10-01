@@ -25,7 +25,7 @@ namespace BlogSite.Demo.Controllers
 		}
 		[HttpPost]
 		public async Task<IActionResult> Index(Writer writer)
-		{
+		 {
 			var existEmail = await _writerService.GetByExpressionAsync(w=>w.Mail==writer.Mail);
 			if(existEmail.Count>0) {
 				ModelState.AddModelError("", "this email has been used");
