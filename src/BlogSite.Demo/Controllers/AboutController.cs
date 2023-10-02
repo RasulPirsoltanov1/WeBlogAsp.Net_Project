@@ -1,4 +1,5 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
+using BlogSite.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogSite.Demo.Controllers
@@ -14,8 +15,12 @@ namespace BlogSite.Demo.Controllers
 
 		public async Task<IActionResult> Index()
         {
-            var about=(await _aboutService.GetAllAsync());
-            return View(about[0]);
+            List<About>? about=(await _aboutService.GetAllAsync());
+            if (about != null && about.Count>0)
+            {
+                return View(about[0]);
+            }
+            return View();
         }
     }
 }
