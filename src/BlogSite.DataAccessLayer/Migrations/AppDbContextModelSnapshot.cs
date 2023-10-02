@@ -281,6 +281,84 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.ToTable("Countries");
                 });
 
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Reciever")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Messages");
+                });
+
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Message2", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RecieverId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.Property<bool?>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecieverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Message2s");
+                });
+
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.NewsLetter", b =>
                 {
                     b.Property<int>("Id")
@@ -305,6 +383,40 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NewsLetters");
+                });
+
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Notification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Detalis")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Symbol")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Writer", b =>
@@ -378,6 +490,23 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.Navigation("Blog");
                 });
 
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Message2", b =>
+                {
+                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", "Reciever")
+                        .WithMany("RecieveMessages")
+                        .HasForeignKey("RecieverId")
+                        .IsRequired();
+
+                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", "Sender")
+                        .WithMany("SendMessages")
+                        .HasForeignKey("SenderId")
+                        .IsRequired();
+
+                    b.Navigation("Reciever");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Writer", b =>
                 {
                     b.HasOne("BlogSite.EntityLayer.Concrete.Country", "Country")
@@ -400,6 +529,13 @@ namespace BlogSite.DataAccessLayer.Migrations
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Country", b =>
                 {
                     b.Navigation("Writers");
+                });
+
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Writer", b =>
+                {
+                    b.Navigation("RecieveMessages");
+
+                    b.Navigation("SendMessages");
                 });
 #pragma warning restore 612, 618
         }

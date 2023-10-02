@@ -9,17 +9,17 @@ namespace BlogSite.BusinessLayer.Extensions
 {
     public static class IFormFileExtension
     {
-        public static async Task<string> UploadFileToAsync(this IFormFile formFile,params string[] folderNames)
+        public static async Task<string> UploadFileToAsync(this IFormFile formFile, params string[] folderNames)
         {
             var fileName = Path.GetFileName(formFile.FileName);
-            fileName=Guid.NewGuid().ToString()+fileName;
+            fileName = Guid.NewGuid().ToString() + fileName;
             var fileDirectory = String.Empty;
             foreach (var folderName in folderNames)
             {
-                fileDirectory = Path.Combine(fileDirectory,folderName);
+                fileDirectory = Path.Combine(fileDirectory, folderName);
             }
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads",fileDirectory, fileName);
-            var dbPath = Path.Combine("uploads",fileDirectory, fileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", fileDirectory, fileName);
+            var dbPath = Path.Combine("uploads", fileDirectory, fileName);
 
             // Create the directory if it doesn't exist
             var directoryPath = Path.GetDirectoryName(filePath);
@@ -36,10 +36,13 @@ namespace BlogSite.BusinessLayer.Extensions
         }
         public static async Task DeleteFileAsync(string imagePath)
         {
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imagePath);
-            if (System.IO.File.Exists(filePath))
+            if (imagePath != null)
             {
-                System.IO.File.Delete(filePath);
+                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", imagePath);
+                if (System.IO.File.Exists(filePath))
+                {
+                    System.IO.File.Delete(filePath);
+                }
             }
         }
     }

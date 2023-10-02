@@ -35,12 +35,17 @@ namespace BlogSite.Demo.Controllers
 				ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 				await HttpContext.SignInAsync(claimsPrincipal);
 				HttpContext.Session.SetString("userEmail", user.Mail);
-				return RedirectToAction("Index", "Blog");
+				return RedirectToAction("Index", "Dashboard");
 			}
 			else
 			{
 				return View();
 			}
 		}
-	}
+        public async Task<IActionResult> LogOut()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index","Blog");
+        }
+    }
 }

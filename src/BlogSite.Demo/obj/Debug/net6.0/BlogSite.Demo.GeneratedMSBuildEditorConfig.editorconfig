@@ -80,6 +80,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/resul/OneDrive/Masaüstü/Projects/BlogSite/src/BlogSite.Demo/Views/Message/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/resul/OneDrive/Masaüstü/Projects/BlogSite/src/BlogSite.Demo/Views/Message/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/resul/OneDrive/Masaüstü/Projects/BlogSite/src/BlogSite.Demo/Views/Newsletter/SubscribeMail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c2xldHRlclxTdWJzY3JpYmVNYWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -114,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/resul/OneDrive/Masaüstü/Projects/BlogSite/src/BlogSite.Demo/Views/Shared/Components/WriterMessageNotification/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcV3JpdGVyTWVzc2FnZU5vdGlmaWNhdGlvblxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/resul/OneDrive/Masaüstü/Projects/BlogSite/src/BlogSite.Demo/Views/Shared/Components/WriterNameAndImage/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcV3JpdGVyTmFtZUFuZEltYWdlXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/resul/OneDrive/Masaüstü/Projects/BlogSite/src/BlogSite.Demo/Views/Shared/Components/WriterNotification/Default.cshtml]

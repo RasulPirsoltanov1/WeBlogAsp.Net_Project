@@ -1,0 +1,56 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayoutPage.cshtml";
+}
+@model List<Message2>
+
+
+
+
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Recieved Messages</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th> User </th>
+                        <th> First name </th>
+                        <th> Subject </th>
+                        <th> Detail </th>
+                        <th> Date </th>
+                        <th> Read More </th>
+                        <th> Delete </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+                            <td class="py-1">
+                                <img src="~/@item.Sender.Image" alt="image" />
+                            </td>
+                            <td> @item.Sender.Name</td>
+                            <td>  @item.Subject </td>
+                            <td>  @(item.Details.Length>30?item.Details.Substring(0,30):item.Details) </td>
+                            <td>@item.CreateDate?.ToString("ddd-MMM-yyyy")</td>
+                            <td><a class="btn btn-primary" asp-action="Detail" asp-controller="Message" asp-route-Id="@item.Id">Read More </a></td>
+                            <td><a class="btn btn-danger" asp-action="Delete" asp-controller="Message" asp-route-Id="@item.Id">Delete</a></td>
+                        </tr>
+                    }
+         
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

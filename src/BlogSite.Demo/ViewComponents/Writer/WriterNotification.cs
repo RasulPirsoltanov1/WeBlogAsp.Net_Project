@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BlogSite.BusinessLayer.Abstract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BlogSite.Demo.ViewComponents.Writer
 {
     public class WriterNotification:ViewComponent
     {
-        public IViewComponentResult Invoke()
+        INotificationService _notificationService;
+
+        public WriterNotification(INotificationService notificationService)
         {
-            return View();
+            _notificationService = notificationService;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var notifications= await _notificationService.GetAllAsync();
+            return View(notifications);
         }
     }
 }

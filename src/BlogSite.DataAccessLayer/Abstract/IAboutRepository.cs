@@ -5,5 +5,4 @@ namespace BlogSite.DataAccessLayer.Abstract
     public interface IAboutRepository : IGenericRepository<About>
     {
     }
-
 }

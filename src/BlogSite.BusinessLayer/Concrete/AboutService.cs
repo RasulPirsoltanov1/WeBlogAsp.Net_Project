@@ -4,7 +4,7 @@ using BlogSite.EntityLayer.Concrete;
 
 namespace BlogSite.BusinessLayer.Concrete
 {
-	public class AboutService : GenericService<About>, IAboutService
+	public partial class AboutService : GenericService<About>, IAboutService
 	{
 		public AboutService(IAboutRepository repository) : base(repository)
 		{

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uNnU/L9yAGOGZlm4lkEiqpgrXY0GuGqvKyVFa9HVcJM=",
+  "Hash": "4gVOJEcip/fJndzSDkSjba+3H9k4zd6B81RielTwIBI=",
   "Source": "BlogSite.Demo",
   "BasePath": "_content/BlogSite.Demo",
   "Mode": "Default",
@@ -1071,6 +1071,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\2664c006-c482-4c9a-92d2-b978b2459049fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg",
+      "SourceId": "BlogSite.Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
+      "BasePath": "_content/BlogSite.Demo",
+      "RelativePath": "uploads/blog/image/2664c006-c482-4c9a-92d2-b978b2459049fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\2664c006-c482-4c9a-92d2-b978b2459049fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg"
+    },
+    {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\2da06307-ea99-4fe4-a7d8-f2cc4fac729a7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png",
       "SourceId": "BlogSite.Demo",
       "SourceType": "Discovered",
@@ -1120,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\a207ebd0-c325-4770-b105-420361c6ff28cover-image.png"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\b1cf73aa-b1e2-4d9e-8cf5-1ac8b1c7d30e7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png",
+      "SourceId": "BlogSite.Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
+      "BasePath": "_content/BlogSite.Demo",
+      "RelativePath": "uploads/blog/image/b1cf73aa-b1e2-4d9e-8cf5-1ac8b1c7d30e7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\b1cf73aa-b1e2-4d9e-8cf5-1ac8b1c7d30e7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\c3d83459-deaf-470b-97dc-d874acd76a837-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png",
@@ -1173,12 +1207,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg"
     },
     {
-      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png",
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\74b2fc5b-6ff6-4749-b22d-ee9fa93e26a279b9febb83d0f632ba_Bald_Eagle_Portrait.jpg",
       "SourceId": "BlogSite.Demo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
       "BasePath": "_content/BlogSite.Demo",
-      "RelativePath": "uploads/writers/profilImages/01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png",
+      "RelativePath": "uploads/writers/profilImages/74b2fc5b-6ff6-4749-b22d-ee9fa93e26a279b9febb83d0f632ba_Bald_Eagle_Portrait.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1187,7 +1221,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\writers\\profilImages\\01e60645-ae48-4230-83b1-4a9b427205e2profile-pic.png"
+      "OriginalItemSpec": "wwwroot\\uploads\\writers\\profilImages\\74b2fc5b-6ff6-4749-b22d-ee9fa93e26a279b9febb83d0f632ba_Bald_Eagle_Portrait.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\94230533-50cb-4f2d-bff1-428f8be2b71cprofile-pic (3).png",
+      "SourceId": "BlogSite.Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
+      "BasePath": "_content/BlogSite.Demo",
+      "RelativePath": "uploads/writers/profilImages/94230533-50cb-4f2d-bff1-428f8be2b71cprofile-pic (3).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\writers\\profilImages\\94230533-50cb-4f2d-bff1-428f8be2b71cprofile-pic (3).png"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\web\\about.html",

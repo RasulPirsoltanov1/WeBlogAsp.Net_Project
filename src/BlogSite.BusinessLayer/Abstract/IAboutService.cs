@@ -2,7 +2,7 @@
 
 namespace BlogSite.BusinessLayer.Abstract
 {
-	public interface IAboutService : IGenericService<About>
+    public interface IAboutService : IGenericService<About>
 	{
 	}
 }

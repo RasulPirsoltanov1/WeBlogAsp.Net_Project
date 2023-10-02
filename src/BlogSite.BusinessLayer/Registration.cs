@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BlogSite.BusinessLayer.Concrete.AboutService;
 
 namespace BlogSite.BusinessLayer
 {
@@ -24,7 +25,10 @@ namespace BlogSite.BusinessLayer
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<IAboutService, AboutService>();
             services.AddScoped<IContactService, ContactService>();
-			services.AddFluentValidationAutoValidation();
+            services.AddScoped<INotificationService, NotificationService>();
+            services.AddScoped<IMessageService, MessageService>();
+            services.AddScoped<IMessage2Service, Message2Service>();
+            services.AddFluentValidationAutoValidation();
 			services.AddFluentValidationClientsideAdapters();
 			services.AddValidatorsFromAssembly(typeof(WriterValidator).Assembly);
 			return services;

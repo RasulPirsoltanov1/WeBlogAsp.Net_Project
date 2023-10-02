@@ -16,23 +16,23 @@
                     {
                         counter++;
                         <div class="col-lg-4 card @(counter%4==0 || counter%7==0? "my-lg-4 my-md-1 my-0":"")">
-                            <a href="single.html">
+                            <a asp-action="Detail" asp-route-id="@item.Id" asp-controller="Blog">
                                 <img src="@item.Image" class="card-img-top img-fluid" alt="">
                             </a>
                             <div class="card-body">
                                 <ul class="blog-icons my-4">
                                     <li>
-                                        <a href="#">
+                                        <a  asp-action="Detail" asp-route-id="@item.Id" asp-controller="Blog">
                                             <i class="far fa-calendar-alt"></i> @(item.CreateDate?.ToString("dd-MMM-yyyy"))
                                         </a>
                                     </li>
                                     <li class="mx-2">
-                                        <a href="#">
+                                        <a  asp-action="Detail" asp-route-id="@item.Id" asp-controller="Blog">
                                             <i class="far fa-comment"></i> 21
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a  asp-action="Detail" asp-route-id="@item.Id" asp-controller="Blog">
                                             <i class="fas fa-eye"></i> @item.Category?.Name
                                         </a>
                                     </li>
