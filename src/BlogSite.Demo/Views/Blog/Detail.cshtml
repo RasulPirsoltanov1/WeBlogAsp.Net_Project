@@ -25,7 +25,7 @@
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i class="far fa-calendar-alt"></i> @(((DateTime)Model.CreateDate).ToString("dd-MMMM-yyyyy"));
+                                            <i class="far fa-calendar-alt"></i> @(Model.CreateDate?.ToString("dd-MMMM-yyyyy"));
                                         </a>
                                     </li>
                                     <li class="mx-2">

@@ -40,8 +40,11 @@ namespace BlogSite.DataAccessLayer.Repositories
         {
             try
             {
-                _context.Remove(t);
-                await _appDbContext.SaveChangesAsync();
+                if (t != null)
+                {
+                    _context.Remove(t);
+                    await _appDbContext.SaveChangesAsync();
+                }
             }
             catch (Exception ex)
             {
@@ -78,7 +81,12 @@ namespace BlogSite.DataAccessLayer.Repositories
         {
             try
             {
-                return await _context.FindAsync(id);
+                var entity = await _context.FindAsync(id);
+                if (entity != null)
+                {
+                    return entity;
+                }
+                return null;
             }
             catch (Exception ex)
             {

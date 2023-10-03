@@ -51,6 +51,11 @@ namespace BlogSite.DataAccessLayer.Context
                 .HasForeignKey(m => m.RecieverId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
 
+            modelBuilder.Entity<Blog>().HasOne(x => x.Category)
+                .WithMany(x=>x.Blogs)
+                .HasForeignKey(x=>x.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             base.OnModelCreating(modelBuilder);
         }
 

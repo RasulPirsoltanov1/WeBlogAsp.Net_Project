@@ -1,0 +1,87 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+@using X.PagedList.Mvc
+@using X.PagedList
+@using X.PagedList.Mvc.Core;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IPagedList<Category>
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Category List</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover dataTables-example">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        
+                        <th>Blogs Count</th>
+                        <th>Created Date</th>
+                        <th>Change Status</th>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Count > 0)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr class="gradeX">
+                                <td>@item.Name</td>
+                                <td>@item.Blogs.Count</td>
+                                <td>@item.CreateDate?.ToString("dd-mm-yyy")</td>
+                                <td>
+                                    @if (item.Status == false)
+                                    {
+                                        <a class="btn btn-warning" asp-action="ChangeStatus" asp-controller="Category" asp-area="admin" asp-route-Id="@item.Id" style="color:white;">Passive</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-success" asp-action="ChangeStatus" asp-controller="Category" asp-area="admin" asp-route-Id="@item.Id" style="color:white;">Active</a>
+                                    }
+                                </td>
+                                <td class="center"> <a onclick="confirmDelete()" asp-action="Delete" asp-controller="Category" asp-area="admin" asp-route-Id="@item.Id" class="btn btn-danger" style="color:white;">Delete</a> </td>
+                                <td class="center"> <a class="btn btn-primary" style="color:white;">Edit</a> </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+            @Html.PagedListPager( Model, page => Url.Action("Index", new { page = page }) )
+        </div>
+        <a class="btn btn-primary" asp-action="Add" asp-controller="Category" asp-area="admin" style="width:100%;">Add New Category</a>
+    </div>
+</div>
+
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function confirmDelete() {
+       RET confirm('Are you sure you want to do this?');
+    }
+</script>

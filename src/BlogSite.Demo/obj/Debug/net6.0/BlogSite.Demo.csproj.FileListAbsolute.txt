@@ -257,3 +257,13 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\obj\Debug\net6.0\BlogSite.Demo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\JetBrains.Annotations.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\X.PagedList.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\ClosedXML.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\ExcelNumberFormat.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Irony.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\SixLabors.Fonts.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\System.IO.Packaging.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\XLParser.dll

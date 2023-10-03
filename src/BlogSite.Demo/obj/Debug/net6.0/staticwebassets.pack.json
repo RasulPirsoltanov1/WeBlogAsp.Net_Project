@@ -6561,6 +6561,10 @@
       "PackagePath": "staticwebassets\\uploads\\blog\\image\\6c00b682-27d7-4091-9ce3-abc5fd1d597aphoto1695237542.jpeg"
     },
     {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\7f36dcf8-7864-4834-ae24-fff3746596457-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\7f36dcf8-7864-4834-ae24-fff3746596457-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png"
+    },
+    {
       "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\a207ebd0-c325-4770-b105-420361c6ff28cover-image.png",
       "PackagePath": "staticwebassets\\uploads\\blog\\image\\a207ebd0-c325-4770-b105-420361c6ff28cover-image.png"
     },
@@ -6573,12 +6577,20 @@
       "PackagePath": "staticwebassets\\uploads\\blog\\image\\c3d83459-deaf-470b-97dc-d874acd76a837-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png"
     },
     {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\e70d0de0-5f81-4d81-a3fb-473bcf411a27fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\image\\e70d0de0-5f81-4d81-a3fb-473bcf411a27fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg"
+    },
+    {
       "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\ecefe845-e419-4767-9a98-a452edd7128052-Blog.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\image\\ecefe845-e419-4767-9a98-a452edd7128052-Blog.jpg"
     },
     {
       "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\68ccccfb-c18e-437d-a81a-098a29cb929aprofile-pic (1).png",
+      "PackagePath": "staticwebassets\\uploads\\writers\\profilImages\\68ccccfb-c18e-437d-a81a-098a29cb929aprofile-pic (1).png"
     },
     {
       "Id": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\74b2fc5b-6ff6-4749-b22d-ee9fa93e26a279b9febb83d0f632ba_Bald_Eagle_Portrait.jpg",

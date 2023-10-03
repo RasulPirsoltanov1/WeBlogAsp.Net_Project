@@ -468,7 +468,8 @@ namespace BlogSite.DataAccessLayer.Migrations
                 {
                     b.HasOne("BlogSite.EntityLayer.Concrete.Category", "Category")
                         .WithMany("Blogs")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("BlogSite.EntityLayer.Concrete.Writer", "Writer")
                         .WithMany()
