@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogSite.EntityLayer", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogSite.DataAccessLayer", "src\BlogSite.DataAccessLayer\BlogSite.DataAccessLayer.csproj", "{43C79AB8-4EB5-4471-BF75-EFDC187E28E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogSite.BusinessLayer", "src\BlogSite.BusinessLayer\BlogSite.BusinessLayer.csproj", "{BC149E5B-B077-408A-993F-374CAD3B6865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogSite.BusinessLayer", "src\BlogSite.BusinessLayer\BlogSite.BusinessLayer.csproj", "{BC149E5B-B077-408A-993F-374CAD3B6865}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogSite.CoreLayer", "src\BlogSite.CoreLayer\BlogSite.CoreLayer.csproj", "{11F189D1-60DA-49FE-9EC4-4C2F9035EF5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogSite.CoreLayer", "src\BlogSite.CoreLayer\BlogSite.CoreLayer.csproj", "{11F189D1-60DA-49FE-9EC4-4C2F9035EF5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogSite.Api", "src\BlogSite.Api\BlogSite.Api.csproj", "{96CE7381-09BD-482B-859F-E08C63545470}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{11F189D1-60DA-49FE-9EC4-4C2F9035EF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11F189D1-60DA-49FE-9EC4-4C2F9035EF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11F189D1-60DA-49FE-9EC4-4C2F9035EF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CE7381-09BD-482B-859F-E08C63545470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CE7381-09BD-482B-859F-E08C63545470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CE7381-09BD-482B-859F-E08C63545470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CE7381-09BD-482B-859F-E08C63545470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{43C79AB8-4EB5-4471-BF75-EFDC187E28E2} = {84AF53A8-24A0-40CA-BB3E-09A4CE8B30A0}
 		{BC149E5B-B077-408A-993F-374CAD3B6865} = {84AF53A8-24A0-40CA-BB3E-09A4CE8B30A0}
 		{11F189D1-60DA-49FE-9EC4-4C2F9035EF5D} = {84AF53A8-24A0-40CA-BB3E-09A4CE8B30A0}
+		{96CE7381-09BD-482B-859F-E08C63545470} = {84AF53A8-24A0-40CA-BB3E-09A4CE8B30A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76F6EC98-C00F-441B-95C1-616547F2A19F}
