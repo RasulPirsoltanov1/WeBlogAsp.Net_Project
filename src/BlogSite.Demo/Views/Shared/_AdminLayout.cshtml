@@ -35,6 +35,8 @@
 
     @await Html.PartialAsync("/Views/Shared/AdminLayoutPartial/PartialJs.cshtml")
 
+    @await RenderSectionAsync("scripts", required: false);
+
 </body>
 </html>
 

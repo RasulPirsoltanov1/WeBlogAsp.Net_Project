@@ -267,3 +267,7 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\SixLabors.Fonts.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\System.IO.Packaging.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\XLParser.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\RestSharp.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

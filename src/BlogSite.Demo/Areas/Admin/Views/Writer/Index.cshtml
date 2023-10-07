@@ -1,0 +1,224 @@
+﻿@{ ViewData["Title"] = "Index"; Layout = "~/Views/Shared/_AdminLayout.cshtml"; } <style>
+  #writer {
+    width: 60%;
+    text-align: center;
+    background-color:aquamarine;
+    border-radius:5rem;
+    padding:2rem;
+    margin:1.5rem auto;
+  }
+
+  #img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 100%;
+  }
+
+  #writerList {
+    display: none;
+    padding: 4rem 0;
+  }
+
+  #addWriter {
+    border-radius: 4rem;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: wheat;
+  }
+</style>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Witers </h1>
+    <hr />
+    <button id="listButton"  class="btn btn-primary">Open List</button>
+    <button id="addButton" class="btn btn-success">Add Writer</button>
+    <hr />
+    <div id="writer"></div>
+    <div id="addWriter" class="container mt-4">
+      <div id="errors"></div>
+      <h3>Add Writer</h3>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Please enter your name...">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Please enter your email...">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Please enter your password...">
+      </div>
+      <button type="button"id="addWriterBtn" class="btn btn-primary" onclick="submitWriter()">Add</button>
+    </div>
+    <div id="writerList" style=""> Witers List here... </div>
+  </div>
+</div>
+@section scripts { <script>
+  $("#addWriter").hide();
+  $("#addButton").on("click", function() {
+    $("#addWriter").toggle(1000);
+  });
+  $("#listButton").on("click", function() {
+    $("#writerList").toggle(1000);
+  });
+  $(".detailButton").on("click", function() {
+    $("#writer").toggle(1000);
+  });
+
+
+  function submitWriter() {
+    let writer = {
+      Name: $("#name").val(),
+      Mail: $("#email").val(),
+      Password: $("#password").val(),
+    }
+    $.ajax({
+      url: "https://localhost:7037/admin/writer/Add",
+      type: "Post",
+      data: writer,
+      dataType: "json", // Veri türünü belirtmek için ekledik
+      success: function(jsonData) {
+        if (jsonData) {
+          var errList = '';
+          var errors = $('#errors');
+          for (let i = 0; i < jsonData.length; i++) {
+            errList += `
+					<h4 style="color:red;">${jsonData[i]}</h4>`;
+          }
+          errors.html(errList);
+        }
+      },
+    });
+  }
+
+  function getWriter(id) {
+    var writer = $('#writer');
+    $.ajax({
+      url: "https://localhost:7037/admin/writer/WriterGetById",
+      type: "get",
+      data: {
+        id: id
+      },
+      dataType: "json", // Veri türünü belirtmek için ekledik
+      success: function(jsonData) {
+        var data = jsonData;
+        console.log(data);
+        var html = "";
+        html = `
+					<div class="form-group">
+						<div class="form-group">
+							<label>Image:</label>
+							<img id="img" style="width:200px;height:200px;" src="https://localhost:7037/${data.image}">
+							</div>
+							<label>Title:</label>
+							<input type="text" class="form-control" value="${data.name}">
+								<span style="color:red; font-size: 14px;"></span>
+							</div>
+							<div class="form-group">
+								<label>Content:</label>
+								<textarea class="form-control" value="">${data.about}</textarea>
+								<span style="color:red; font-size: 14px;"></span>
+							</div>
+							<div class="form-group">
+								<label>Email:</label>
+								<input type="text" class="form-control" value="${data.mail}">
+									<span style="color:red; font-size: 14px;"></span>
+								</div>
+                                                   `;
+        writer.html(html);
+      },
+      error: function(xhr) {
+        console.log(xhr);
+      }
+    });
+  }
+  $(document).ready(function() {
+                               // "Open List" butonuna tıklanınca getList fonksiyonunu çağır
+                               $('#listButton').on("click", function () {
+                                   getList();
+                               });
+                               $("#addWriterBtn").on("click", function () {
+                                   setTimeout(()=>{getList()},500);
+                               })
+      function getList(){
+      $.ajax({
+        url: "https://localhost:7037/admin/writer/WriterList",
+        type: "get",
+        dataType: "json", // Veri türünü belirtmek için ekledik
+        success: function(jsonData) {
+          var data = jsonData;
+          console.log(data);
+          var obj = JSON.parse(data.jsonWriters);
+          var writerList = $('#writerList');
+          var html = `
+								<table class='table table-bordered'>
+									<tr>
+										<th>Name</th>
+										<th>Mail</th>
+										<th>Status</th>
+										<th>Edit</th>
+										<th>Delete</th>
+									</tr>
+                                                           `;
+          for (var i = 0; i < obj.length; i++) {
+            html += `
+									<tr id="${obj[i].Id}item">
+										<td>${obj[i].Name}</td>
+										<td>${obj[i].Mail}</td>
+										<td>${obj[i].Status}</td>
+										<td>
+											<button class="btn btn-info detailButton"  onclick="getWriter(${obj[i].Id})">Details</button>
+										</td>
+										<td>
+											<button class="btn btn-danger"  onclick="deleteWriter(${ obj[i].Id })">Delete</button>
+										</td>
+									</tr>`;
+          }
+          html += `
+								</table>`;
+          writerList.html(html);
+        },
+        error: function(xhr) {
+          console.log(xhr);
+        }
+      });
+    }
+   
+  });
+
+  function deleteWriter(id) {
+    $.ajax({
+      method: "Get",
+      data: {
+        Id: id
+      },
+      url: "https://localhost:7037/admin/writer/Delete",
+      dataType: "json", // Veri türünü belirtmek için ekledik
+      success: function(data) {
+        console.log(data);
+        var itemId = "#" + id + "item";
+        var tr = $(itemId).hide(500);
+      },
+      error: function() {
+        var tr = $(`#${id}item`).hide(500);
+      },
+      always: function() {
+        var tr = $(`#${id}item`).hide(500);
+      }
+    });
+  }
+</script> } 
+
+
+
+
+
+@* <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>*@

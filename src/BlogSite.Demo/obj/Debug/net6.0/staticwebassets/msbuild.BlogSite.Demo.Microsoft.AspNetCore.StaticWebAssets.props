@@ -26224,6 +26224,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\2da06307-ea99-4fe4-a7d8-f2cc4fac729a7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\68b75c83-7699-4b8a-91b2-ef052450942fprofile-pic.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>BlogSite.Demo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BlogSite.Demo</BasePath>
+      <RelativePath>uploads/blog/image/68b75c83-7699-4b8a-91b2-ef052450942fprofile-pic.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\68b75c83-7699-4b8a-91b2-ef052450942fprofile-pic.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\6c00b682-27d7-4091-9ce3-abc5fd1d597aphoto1695237542.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>BlogSite.Demo</SourceId>
@@ -26304,6 +26320,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\c3d83459-deaf-470b-97dc-d874acd76a837-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\c73772ed-37fa-4967-9c8e-246dd44cc93f7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>BlogSite.Demo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BlogSite.Demo</BasePath>
+      <RelativePath>uploads/blog/image/c73772ed-37fa-4967-9c8e-246dd44cc93f7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\c73772ed-37fa-4967-9c8e-246dd44cc93f7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-1280x720.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\e1646625-82f3-4e35-9f40-89b30ed8ec91michael-dziedzic-gEN5Btvf2Eg-unsplash.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>BlogSite.Demo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BlogSite.Demo</BasePath>
+      <RelativePath>uploads/blog/image/e1646625-82f3-4e35-9f40-89b30ed8ec91michael-dziedzic-gEN5Btvf2Eg-unsplash.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\e1646625-82f3-4e35-9f40-89b30ed8ec91michael-dziedzic-gEN5Btvf2Eg-unsplash.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\e70d0de0-5f81-4d81-a3fb-473bcf411a27fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>BlogSite.Demo</SourceId>
@@ -26351,6 +26399,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blog\image\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\writers\profilImages\1c85f075-e6fc-4677-a3ed-d1a62a31c59bphoto1693908020.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>BlogSite.Demo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/BlogSite.Demo</BasePath>
+      <RelativePath>uploads/writers/profilImages/1c85f075-e6fc-4677-a3ed-d1a62a31c59bphoto1693908020.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\writers\profilImages\1c85f075-e6fc-4677-a3ed-d1a62a31c59bphoto1693908020.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\writers\profilImages\68ccccfb-c18e-437d-a81a-098a29cb929aprofile-pic (1).png))">
       <SourceType>Package</SourceType>

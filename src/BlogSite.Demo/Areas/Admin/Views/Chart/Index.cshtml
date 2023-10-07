@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12">
+    <div id="chartDiv" style="width:100%;height:600px; background-color:rgba(0,0,0,0.3)">
+        Chart area
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawOnLoad);
+
+    function drawOnLoad() {
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://localhost:7037/admin/chart/DynamicCategoryChart",
+                type: "get",
+                dataType: "json", // Veri türünü belirtmek için ekledik
+                success: function (jsonData) {
+                    var data=jsonData;
+                    console.log(data);
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Category Name');
+                    data.addColumn('number', 'Category Blogs Count');
+
+                    for (var i = 0; i < jsonData.length; i++) {
+                        data.addRow([jsonData[i].name, jsonData[i].count]);
+                    }
+
+                    var options = {
+                        title: 'Asp.Net Core Integrated Google statistics chart ',
+                        is3D: true
+                    };
+
+                    var chart = new google.visualization.PieChart(document.getElementById('chartDiv'));
+                    chart.draw(data, options);
+                },
+                error: function (xhr) {
+                    console.log(xhr);
+                }
+            });
+        });
+    }
+</script>

@@ -24,6 +24,7 @@ namespace BlogSite.DataAccessLayer
             services.AddScoped<INotificationRepository, NotificationRepository>();
             services.AddScoped<IMessageRepository, MessageRepository>();
             services.AddScoped<IMessage2Repository, Message2Repository>();
+            services.AddScoped<IAdminRepository, AdminRepository>();
             return services;
         }
     }

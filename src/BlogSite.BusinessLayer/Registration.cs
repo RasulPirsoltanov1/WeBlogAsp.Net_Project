@@ -28,6 +28,7 @@ namespace BlogSite.BusinessLayer
             services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IMessageService, MessageService>();
             services.AddScoped<IMessage2Service, Message2Service>();
+            services.AddScoped<IAdminService, AdminService>();
             services.AddFluentValidationAutoValidation();
 			services.AddFluentValidationClientsideAdapters();
 			services.AddValidatorsFromAssembly(typeof(WriterValidator).Assembly);

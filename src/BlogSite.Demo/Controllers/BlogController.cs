@@ -105,6 +105,7 @@ namespace BlogSite.Demo.Controllers
             var dbblog = await _blogService.GetByIdAsync(blog.Id);
             dbblog.Title = blog.Title;
             dbblog.Content = blog.Content;
+            dbblog.CategoryId = blog.CategoryId;
             if (formFile != null)
             {
                 await IFormFileExtension.DeleteFileAsync(dbblog.Image??"");

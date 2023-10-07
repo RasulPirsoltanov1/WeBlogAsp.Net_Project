@@ -225,6 +225,10 @@
               "target": "Package",
               "version": "[6.0.16, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[110.2.0, )"
+            },
             "X.PagedList": {
               "target": "Package",
               "version": "[8.4.7, )"
