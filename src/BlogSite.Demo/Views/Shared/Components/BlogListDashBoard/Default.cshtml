@@ -19,20 +19,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach(var i in Model){
-                                <tr>
-                                    <td>
-                                        <img src="~/@i.Image" class="mr-2" alt="image"> @i.Title
-                                    </td>
-                                    <td> @(i.Content.Length > 30 ? i.Content.Substring(0, 30):i.Content) </td>
-                                    <td>
-                                        <label class="badge badge-gradient-success">@i.Status</label>
-                                    </td>
-                                    <td> @(((DateTime)i.CreateDate).ToLongDateString()) </td>
-                                    <td> <a asp-action="Detail" asp-controller="Blog" asp-route-Id="@i.Id" class="btn btn-primary">Details</a> </td>
-                                </tr>
+                            @if (Model != null)
+                            {
+                                @foreach (var i in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <img src="~/@i.Image" class="mr-2" alt="image"> @i.Title
+                                        </td>
+                                        <td> @(i.Content.Length > 30 ? i.Content.Substring(0, 30) : i.Content) </td>
+                                        <td>
+                                            <label class="badge badge-gradient-success">@i.Status</label>
+                                        </td>
+                                        <td> @(((DateTime)i.CreateDate).ToLongDateString()) </td>
+                                        <td> <a asp-action="Detail" asp-controller="Blog" asp-route-Id="@i.Id" class="btn btn-primary">Details</a> </td>
+                                    </tr>
+                                }
                             }
-                   
                         </tbody>
                     </table>
                 </div>

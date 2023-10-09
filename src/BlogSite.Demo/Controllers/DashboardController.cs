@@ -20,9 +20,9 @@ namespace BlogSite.Demo.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var writerId = await _userManager.FindByNameAsync(User.Identity.Name);
+            var writerId = (await _userManager.FindByNameAsync(User.Identity.Name)).Id;
             ViewBag.v1 = _blogService.values.Count();
-            ViewBag.v2 = _blogService.values.Where(x=>x.WriterId==1).Count();
+            ViewBag.v2 = _blogService.values.Where(x=>x.WriterId== writerId).Count();
             ViewBag.v3 = _blogService.values.Where(X=>X.CreateDate>DateTime.Now.AddDays(-7)).Count();
             return View();
         }

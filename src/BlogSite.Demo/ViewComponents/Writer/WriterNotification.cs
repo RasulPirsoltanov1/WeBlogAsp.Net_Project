@@ -15,11 +15,8 @@ namespace BlogSite.Demo.ViewComponents.Writer
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            //var notifications= await _notificationService.GetAllAsync();
-            return View(new List<Notification>
-            {
-
-            });
+            var notifications = await _notificationService.GetAllAsync();
+            return View(notifications);
         }
     }
 }

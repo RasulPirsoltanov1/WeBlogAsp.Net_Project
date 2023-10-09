@@ -1,5 +1,6 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.EntityLayer.Concrete;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,9 +20,13 @@ namespace BlogSite.Demo.ViewComponents.Writer
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            //var writer = (await _writerService.values.Include(x=>x.Country).Where(x=>x.Mail==User.Identity.Name).ToListAsync())[0];
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            return View(user);
+            if (User?.Identity?.Name != null)
+            {
+                //var writer = (await _writerService.values.Include(x=>x.Country).Where(x=>x.Mail==User.Identity.Name).ToListAsync())[0];
+                var user = await _userManager.FindByNameAsync(User?.Identity?.Name);
+                return View(user);
+            }
+            return View(null);
         }
     }
 }

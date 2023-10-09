@@ -153,12 +153,18 @@ namespace BlogSite.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("About")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256)
@@ -207,6 +213,8 @@ namespace BlogSite.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -501,11 +509,21 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("WriterId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("WriterId1")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("RecieverId");
 
                     b.HasIndex("SenderId");
+
+                    b.HasIndex("WriterId");
+
+                    b.HasIndex("WriterId1");
 
                     b.ToTable("Message2s");
                 });
@@ -718,6 +736,15 @@ namespace BlogSite.DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.AppUser", b =>
+                {
+                    b.HasOne("BlogSite.EntityLayer.Concrete.Country", "Country")
+                        .WithMany("AppUsers")
+                        .HasForeignKey("CountryId");
+
+                    b.Navigation("Country");
+                });
+
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Blog", b =>
                 {
                     b.HasOne("BlogSite.EntityLayer.Concrete.Category", "Category")
@@ -725,7 +752,7 @@ namespace BlogSite.DataAccessLayer.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", "Writer")
+                    b.HasOne("BlogSite.EntityLayer.Concrete.AppUser", "Writer")
                         .WithMany()
                         .HasForeignKey("WriterId");
 
@@ -747,15 +774,23 @@ namespace BlogSite.DataAccessLayer.Migrations
 
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Message2", b =>
                 {
-                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", "Reciever")
+                    b.HasOne("BlogSite.EntityLayer.Concrete.AppUser", "Reciever")
                         .WithMany("RecieveMessages")
                         .HasForeignKey("RecieverId")
                         .IsRequired();
 
-                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", "Sender")
+                    b.HasOne("BlogSite.EntityLayer.Concrete.AppUser", "Sender")
                         .WithMany("SendMessages")
                         .HasForeignKey("SenderId")
                         .IsRequired();
+
+                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", null)
+                        .WithMany("RecieveMessages")
+                        .HasForeignKey("WriterId");
+
+                    b.HasOne("BlogSite.EntityLayer.Concrete.Writer", null)
+                        .WithMany("SendMessages")
+                        .HasForeignKey("WriterId1");
 
                     b.Navigation("Reciever");
 
@@ -765,7 +800,7 @@ namespace BlogSite.DataAccessLayer.Migrations
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Writer", b =>
                 {
                     b.HasOne("BlogSite.EntityLayer.Concrete.Country", "Country")
-                        .WithMany("Writers")
+                        .WithMany()
                         .HasForeignKey("CountryId");
 
                     b.Navigation("Country");
@@ -822,6 +857,13 @@ namespace BlogSite.DataAccessLayer.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BlogSite.EntityLayer.Concrete.AppUser", b =>
+                {
+                    b.Navigation("RecieveMessages");
+
+                    b.Navigation("SendMessages");
+                });
+
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Blog", b =>
                 {
                     b.Navigation("Comments");
@@ -834,7 +876,7 @@ namespace BlogSite.DataAccessLayer.Migrations
 
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Country", b =>
                 {
-                    b.Navigation("Writers");
+                    b.Navigation("AppUsers");
                 });
 
             modelBuilder.Entity("BlogSite.EntityLayer.Concrete.Writer", b =>

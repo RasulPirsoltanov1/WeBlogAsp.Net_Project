@@ -82,7 +82,6 @@ namespace BlogSite.DataAccessLayer.Context
                     }
                 }
             }
-
             // save changes
             return await base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }

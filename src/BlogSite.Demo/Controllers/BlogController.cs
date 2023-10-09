@@ -3,6 +3,7 @@ using BlogSite.BusinessLayer.Extensions;
 using BlogSite.DataAccessLayer.Abstract;
 using BlogSite.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,12 +15,13 @@ namespace BlogSite.Demo.Controllers
         IBlogService _blogService;
         ICategoryService _categoryService;
         IWriterService _writerService;
-
-        public BlogController(IBlogService blogService, IWriterService writerService, ICategoryService categoryService)
+        UserManager<AppUser> _userManager;
+        public BlogController(IBlogService blogService, IWriterService writerService, ICategoryService categoryService, UserManager<AppUser> userManager)
         {
             _blogService = blogService;
             _writerService = writerService;
             _categoryService = categoryService;
+            _userManager = userManager;
         }
         [AllowAnonymous]
         public async Task<IActionResult> Index()
@@ -31,12 +33,12 @@ namespace BlogSite.Demo.Controllers
         {
             return View(await _blogService.GetBlogByIdWithCommentsAsync(id));
         }
-        public async Task<IActionResult> BlogListByWriter(string email)
+        public async Task<IActionResult> BlogListByWriter(string? email)
         {
-            var writer = await _writerService.GetByExpressionAsync(x => x.Mail == email);
-            if (writer.Count > 0)
+            var writer = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (writer!=null)
             {
-                var blogs = await _blogService.values.Include(x => x.Category).Where(x => x.WriterId == writer[0].Id).ToListAsync();
+                var blogs = await _blogService.values.Include(x => x.Category).Where(x => x.WriterId == writer.Id).ToListAsync();
                 return View(blogs);
             }
             return View();
@@ -58,10 +60,10 @@ namespace BlogSite.Demo.Controllers
                     {
                         blog.Image = await formFile.UploadFileToAsync("blog", "image");
                     }
-                    var writer = await _writerService.GetByExpressionAsync(x => x.Mail == User.Identity.Name);
-                    if (writer.Count > 0)
+                    var writer = await _userManager.FindByNameAsync(User.Identity.Name);
+                    if (writer!=null)
                     {
-                        blog.WriterId = writer[0].Id;
+                        blog.WriterId = writer.Id;
                     }
                     else
                     {

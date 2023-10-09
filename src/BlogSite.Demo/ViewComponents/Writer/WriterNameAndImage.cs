@@ -17,10 +17,13 @@ namespace BlogSite.Demo.ViewComponents.Writer
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            //var writer = (await _writerService.GetByExpressionAsync(x => x.Mail == User.Identity.Name))[0];
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (User?.Identity?.Name != null)
+            {
+                var user = await _userManager.FindByNameAsync(User?.Identity?.Name);
 
-            return View(user);
+                return View(user);
+            }
+            return View(null);
         }
     }
 }

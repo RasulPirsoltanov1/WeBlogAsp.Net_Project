@@ -34,7 +34,7 @@
                             <td class="py-1">
                                 <img src="~/@item.Sender.Image" alt="image" />
                             </td>
-                            <td> @item.Sender.Name</td>
+                            <td> @item.Sender.NameSurname</td>
                             <td>  @item.Subject </td>
                             <td>  @(item.Details.Length>30?item.Details.Substring(0,30):item.Details) </td>
                             <td>@item.CreateDate?.ToString("ddd-MMM-yyyy")</td>
