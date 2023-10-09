@@ -1,4 +1,5 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
+using BlogSite.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
@@ -16,9 +17,12 @@ namespace BlogSite.Demo.ViewComponents.Writer
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var messsages2 =await _message2Service.values.Include(x=>x.Reciever).Include(x=>x.Sender).Where(x=>x.Reciever.Mail== User.Identity.Name).ToListAsync();
-            ViewBag.Count=messsages2.Count;
-            return View(messsages2);
+            //var messsages2 =await _message2Service.values.Include(x=>x.Reciever).Include(x=>x.Sender).Where(x=>x.Reciever.Mail== User.Identity.Name).ToListAsync();
+            //ViewBag.Count=messsages2.Count;
+            return View(new List<Message2>
+            {
+
+            });
         }
     }
 }

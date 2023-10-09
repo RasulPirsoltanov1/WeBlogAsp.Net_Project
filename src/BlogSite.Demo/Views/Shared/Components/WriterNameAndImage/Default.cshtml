@@ -1,5 +1,5 @@
 ﻿@using BlogSite.EntityLayer.Concrete;
-@model Writer
+@model AppUser
 
 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
     <div class="nav-profile-img">
@@ -7,6 +7,6 @@
         <span class="availability-status online"></span>
     </div>
     <div class="nav-profile-text">
-        <span class="font-weight-bold mb-2">@Model.Name</span>
+        <span class="font-weight-bold mb-2">@Model.NameSurname</span>
     </div>
 </a>

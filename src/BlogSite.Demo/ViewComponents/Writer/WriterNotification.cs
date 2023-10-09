@@ -1,4 +1,5 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
+using BlogSite.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogSite.Demo.ViewComponents.Writer
@@ -14,8 +15,11 @@ namespace BlogSite.Demo.ViewComponents.Writer
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var notifications= await _notificationService.GetAllAsync();
-            return View(notifications);
+            //var notifications= await _notificationService.GetAllAsync();
+            return View(new List<Notification>
+            {
+
+            });
         }
     }
 }

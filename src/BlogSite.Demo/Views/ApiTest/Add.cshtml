@@ -1,0 +1,19 @@
+﻿@using BlogSite.Api.Context.Entites;
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model Employee
+
+<div class="container mt-5">
+    <h1>Add Employee</h1>
+    <form class="form" method="post">
+        <div class="mb-3">
+            <label for="Name" class="form-label">Name of Employee</label>
+            <input type="text" class="form-control" id="Name" asp-for="Name" placeholder="Enter Name">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>

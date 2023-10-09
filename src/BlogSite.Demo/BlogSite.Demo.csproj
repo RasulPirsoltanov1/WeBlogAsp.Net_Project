@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlogSite.Api\BlogSite.Api.csproj" />
     <ProjectReference Include="..\BlogSite.BusinessLayer\BlogSite.BusinessLayer.csproj" />
   </ItemGroup>
 

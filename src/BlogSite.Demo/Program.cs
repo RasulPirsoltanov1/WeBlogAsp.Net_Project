@@ -5,6 +5,10 @@ using BlogSite.BusinessLayer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using BlogSite.EntityLayer.Concrete;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +17,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
 
+builder.Services.AddHttpClient();
 
 builder.Services.AddMvc(opt =>
 {
@@ -26,19 +31,28 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 		options.LoginPath = "/Login/Index";
 	});
 
-
-
-
-
-
-
+//DBContext
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+
 //Layers
 builder.Services.DataAccessLayerRegistration();
 builder.Services.BusinessLayerRegistration();
+
+
+//Identity
+builder.Services.AddIdentity<AppUser, AppRole>()
+    .AddEntityFrameworkStores<AppDbContext>();
+
+
+
+
+
+
+
 
 var app = builder.Build();
 
@@ -51,6 +65,7 @@ if (!app.Environment.IsDevelopment())
 }
 app.UseSession();
 app.UseAuthentication();
+app.UseAuthorization();
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1","?code={0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();

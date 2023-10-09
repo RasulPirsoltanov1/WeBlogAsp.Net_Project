@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "470RjRlv54ydLLJJbFg7PZyEDKVU2dW5mx2k2Xli0nk=",
+  "Hash": "K/DOpW96/WzL7AdaakxvYJNAN+oBnKYcA6qJ0Zn1aEE=",
   "Source": "BlogSite.Demo",
   "BasePath": "_content/BlogSite.Demo",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Api\\BlogSite.Api.csproj",
+      "Version": 2,
+      "Source": "BlogSite.Api",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "BlogSite.Demo\\wwwroot",

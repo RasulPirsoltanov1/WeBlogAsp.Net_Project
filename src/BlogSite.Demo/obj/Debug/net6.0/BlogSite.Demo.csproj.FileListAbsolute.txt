@@ -271,3 +271,17 @@ C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\BlogSite.Api.deps.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\BlogSite.Api.runtimeconfig.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\BlogSite.Api.exe
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\BlogSite.Api.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\BlogSite.Api.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.Demo\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
