@@ -1,11 +1,14 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.Demo.Areas.Admin.Models;
 using BlogSite.EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlogSite.Demo.Areas.Admin.Controllers
 {
+
+    [Authorize(Roles = "Admin")]
 
     [Area("admin")]
     [Route("[area]/[controller]/[action]")]

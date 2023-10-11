@@ -1,0 +1,24 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "RemoveUserRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@model AppUser
+
+<h2> Remove Role from @Model.NameSurname</h2>
+
+<form method="post" asp-action="RemoveUserRolePost">
+    <input hidden value="@Model.Id" name="UserId" />
+    <select name="RoleName" class="form-control">
+        @foreach (var item in ViewBag.Roles)
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
+    <button class="btn btn-primary">Submit</button>
+</form>
+
+

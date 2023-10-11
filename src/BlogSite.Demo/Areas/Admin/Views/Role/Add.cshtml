@@ -1,0 +1,18 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model AppRole
+<div class="container">
+    <h2>Edit Role</h2>
+    <form id="message-form" method="post">
+        <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text" class="form-control" id="Name" asp-for="Name" placeholder="Name...">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

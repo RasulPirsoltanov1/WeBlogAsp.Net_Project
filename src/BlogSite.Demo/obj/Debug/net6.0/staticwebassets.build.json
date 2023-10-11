@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XhHDTZUl/gIHhTzdha0mSmIlTfVx/evxeKTZOjXGnEA=",
+  "Hash": "V81vNgdoDUM8A2ABRdSmHhM5OaqtmNi0QDxJ2l1ElqQ=",
   "Source": "BlogSite.Demo",
   "BasePath": "_content/BlogSite.Demo",
   "Mode": "Default",
@@ -28096,6 +28096,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\ecefe845-e419-4767-9a98-a452edd7128052-Blog.jpg"
     },
     {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\eef164ba-b78d-441d-af5b-bfd79209a66dmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg",
+      "SourceId": "BlogSite.Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
+      "BasePath": "_content/BlogSite.Demo",
+      "RelativePath": "uploads/blog/image/eef164ba-b78d-441d-af5b-bfd79209a66dmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blog\\image\\eef164ba-b78d-441d-af5b-bfd79209a66dmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg"
+    },
+    {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\blog\\image\\faae9391-d12f-4d8f-8f3d-6d1ce8673a6cmichael-dziedzic-gEN5Btvf2Eg-unsplash.jpg",
       "SourceId": "BlogSite.Demo",
       "SourceType": "Discovered",
@@ -28162,6 +28179,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\uploads\\writers\\e2c1312d-c3d3-4155-80c3-f792e8431b95photo1695237402.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\uploads\\writers\\ea4f6e2a-c67c-47f6-b72c-bd1cfa98f9ffWhatsApp_Image_2023-09-16_at_20.46.16-removebg-preview.png",
+      "SourceId": "BlogSite.Demo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\",
+      "BasePath": "_content/BlogSite.Demo",
+      "RelativePath": "uploads/uploads/writers/ea4f6e2a-c67c-47f6-b72c-bd1cfa98f9ffWhatsApp_Image_2023-09-16_at_20.46.16-removebg-preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\uploads\\writers\\ea4f6e2a-c67c-47f6-b72c-bd1cfa98f9ffWhatsApp_Image_2023-09-16_at_20.46.16-removebg-preview.png"
     },
     {
       "Identity": "C:\\Users\\resul\\OneDrive\\Masaüstü\\Projects\\BlogSite\\src\\BlogSite.Demo\\wwwroot\\uploads\\writers\\profilImages\\1c85f075-e6fc-4677-a3ed-d1a62a31c59bphoto1693908020.jpeg",

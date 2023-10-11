@@ -1,11 +1,13 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net;
 
 namespace BlogSite.Demo.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("admin")]
     [Route("[area]/[controller]/[action]")]
     public class WriterController : Controller

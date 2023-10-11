@@ -1,11 +1,13 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using BlogSite.EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
 
 namespace BlogSite.Demo.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("admin")]
     [Route("[area]/[controller]/[action]")]
     public class CategoryController : Controller

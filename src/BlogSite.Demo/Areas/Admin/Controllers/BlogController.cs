@@ -1,5 +1,6 @@
 ﻿using BlogSite.BusinessLayer.Abstract;
 using ClosedXML.Excel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,18 @@ namespace BlogSite.Demo.Areas.Admin.Controllers
         public BlogController(IBlogService blogService)
         {
             _blogService = blogService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var blogs = await _blogService.values.Include(x=>x.Category).ToListAsync();
+            return View(blogs);
+        }
+
+        public async Task<IActionResult> Delete(int Id)
+        {
+            await _blogService.DeleteAsync(Id);
+            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> ExportBlogList()

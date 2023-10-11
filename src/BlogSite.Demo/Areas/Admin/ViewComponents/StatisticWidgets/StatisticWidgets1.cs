@@ -21,15 +21,23 @@ namespace BlogSite.Demo.Areas.Admin.ViewComponents.StatisticWidgets
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string json = (new WebClient()).DownloadString("https://api.openweathermap.org/data/2.5/weather?q=Ismayilli&appid=0202b908ccb9aa3cc8cd1ef6721e162f&lang=az&units=metric");
+            try
+            {
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                string json = (new WebClient()).DownloadString("https://api.openweathermap.org/data/2.5/weather?q=Ismayilli&appid=0202b908ccb9aa3cc8cd1ef6721e162f&lang=az&units=metric");
+                var data = JsonConvert.DeserializeObject<Root>(json);
+                ViewBag.degree = data?.main.temp;
+                ViewBag.description = data?.weather[0].description;
+            }
+            catch (Exception ex)
+            {
+
+            }
             ViewBag.BlogsCount = _blogService.values.Count();
             ViewBag.Messages = _contactService.values.Count();
             ViewBag.Comments= _commentService.values.Count();
-            var data = JsonConvert.DeserializeObject<Root>(json);
-            ViewBag.degree = data?.main.temp; 
-            ViewBag.description = data?.weather[0].description;
+
             return View();  
         }
     }

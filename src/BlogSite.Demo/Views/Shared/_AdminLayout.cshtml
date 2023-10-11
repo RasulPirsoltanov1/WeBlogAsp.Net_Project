@@ -10,6 +10,7 @@
 
  @await Html.PartialAsync("/Views/Shared/AdminLayoutPartial/PartialHead.cshtml")
 
+@await RenderSectionAsync("css", required: false)
 <body>
     <div id="wrapper">
 
@@ -35,7 +36,7 @@
 
     @await Html.PartialAsync("/Views/Shared/AdminLayoutPartial/PartialJs.cshtml")
 
-    @await RenderSectionAsync("scripts", required: false);
+    @await RenderSectionAsync("scripts", required: false)
 
 </body>
 </html>

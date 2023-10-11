@@ -61,11 +61,14 @@ namespace BlogSite.Demo.Controllers
         //		return View();
         //	}
         //}
-        //      public async Task<IActionResult> LogOut()
-        //      {
-        //          await HttpContext.SignOutAsync();
-        //          return RedirectToAction("Index","Blog");
-        //      }
-        //  }
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Blog");
+        }
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
     }
 }

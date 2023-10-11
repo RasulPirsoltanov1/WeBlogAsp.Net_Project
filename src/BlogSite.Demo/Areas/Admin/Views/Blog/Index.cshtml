@@ -1,0 +1,59 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model List<Blog>
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Blogs Table</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td><img src="~/@item.Image" style="height:50px;width:50px;" /></td>
+                        <td>@item.Title</td>
+                        <td>@item.Category?.Name</td>
+                        <td><a asp-action="Delete" asp-area="admin" asp-controller="Blog" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

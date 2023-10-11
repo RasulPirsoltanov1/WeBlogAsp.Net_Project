@@ -19,12 +19,9 @@ namespace BlogSite.Demo.ViewComponents.Writer
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            //var messsages2 = await _message2Service.values.Include(x => x.Reciever).Include(x => x.Sender).Where(x => x.Reciever.UserName == User?.Identity.Name).ToListAsync();
-            //ViewBag.Count = messsages2.Count;
-            return View(new List<Message2>
-            {
-
-            });
+            var messsages2 = await _message2Service.values.Include(x => x.Reciever).Include(x => x.Sender).Where(x => x.Reciever.UserName == User.Identity.Name).ToListAsync();
+            ViewBag.Count = messsages2.Count;
+            return View(messsages2);
         }
     }
 }

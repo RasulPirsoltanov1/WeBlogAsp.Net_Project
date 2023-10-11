@@ -15,6 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+
 builder.Services.AddSession();
 
 builder.Services.AddHttpClient();
@@ -25,11 +27,7 @@ builder.Services.AddMvc(opt =>
     opt.Filters.Add(new AuthorizeFilter(policy));
 });
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-	.AddCookie(options =>
-	{
-		options.LoginPath = "/Login/Index";
-	});
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme);
 
 //DBContext
 builder.Services.AddDbContext<AppDbContext>(opt =>
@@ -47,9 +45,16 @@ builder.Services.BusinessLayerRegistration();
 builder.Services.AddIdentity<AppUser, AppRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
+builder.Services.ConfigureApplicationCookie(options => { 
+    options.LoginPath = "/LogIn/Index";
+    options.AccessDeniedPath= "/LogIn/AccessDenied";
 
-
-
+    // Cookie settings  
+    options.Cookie.HttpOnly = true;
+    options.Cookie.Name = "Horus";
+    options.ExpireTimeSpan = TimeSpan.FromHours(2);
+    options.SlidingExpiration = true;
+});
 
 
 
@@ -64,14 +69,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseSession();
-app.UseAuthentication();
-app.UseAuthorization();
+
 app.UseStatusCodePagesWithReExecute("/ErrorPage/Error1","?code={0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

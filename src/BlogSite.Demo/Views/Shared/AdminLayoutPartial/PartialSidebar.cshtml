@@ -33,6 +33,9 @@
                 <a asp-action="ExportBlogList" asp-controller="Blog" asp-area="admin"><i class="fa   fa-file-excel-o"></i> <span class="nav-label">Get Blogs Excel File</span></a>
             </li>
             <li>
+                <a asp-action="Index" asp-controller="Blog" asp-area="admin"><i class="fa   fa-tag"></i> <span class="nav-label">Blogs</span></a>
+            </li>
+            <li>
                 <a asp-action="Index" asp-controller="Widget" asp-area="admin"><i class="fa fa-dropbox"></i> <span class="nav-label">Widgets</span></a>
             </li>
             <li>
@@ -42,7 +45,13 @@
                 <a asp-action="Index" asp-controller="Writer" asp-area="admin"><i class="fa fa-user"></i> <span class="nav-label">Writers</span></a>
             </li>
             <li>
-                <a asp-action="Index" asp-controller="ApiTest" ><i class="fa fa-unlink"></i> <span class="nav-label">Local Api</span></a>
+                <a asp-action="Index" asp-controller="ApiTest" asp-area="admin"><i class="fa fa-unlink"></i> <span class="nav-label">Local Api</span></a>
+            </li>
+            <li>
+                <a asp-action="Index" asp-controller="Role" asp-area="admin"><i class="fa fa-unlink"></i> <span class="nav-label">Roles</span></a>
+            </li>
+             <li>
+                <a asp-action="UserRoleList" asp-controller="Role" asp-area="admin"><i class="fa fa-unlink"></i> <span class="nav-label">User Role List</span></a>
             </li>
         </ul>
 

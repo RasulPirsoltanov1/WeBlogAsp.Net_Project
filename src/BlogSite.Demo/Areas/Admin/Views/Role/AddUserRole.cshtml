@@ -1,0 +1,22 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "AddUserRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model AppUser
+
+    <h2> Add new Role to @Model.NameSurname</h2>
+
+<form method="post" asp-action="AddUserRolePost">
+    <input hidden value="@Model.Id" name="UserId" />
+    <select name="RoleId" class="form-control">
+        @foreach (var item in (List<AppRole>)ViewBag.Roles)
+        {
+            <option value="@item.Id">@item.Name</option>
+        }
+    </select>
+    <button class="btn btn-primary">Submit</button>
+</form>
+

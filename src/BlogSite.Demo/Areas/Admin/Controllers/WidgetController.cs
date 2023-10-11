@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BlogSite.Demo.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin")]
+
     [Route("[area]/[controller]/[action]")]
     public class WidgetController : Controller
     {

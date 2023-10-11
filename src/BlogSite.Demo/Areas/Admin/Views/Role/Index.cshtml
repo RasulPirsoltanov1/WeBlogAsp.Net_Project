@@ -1,0 +1,59 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<AppRole>
+<a asp-action="Add" asp-controller="Role" asp-area="admin" style="width:100%; display:inline-block;" class="btn btn-success">Add New Role</a>
+<div class="ibox ">
+    <div class="ibox-title">
+        <h5>Roles Table</h5>
+        <div class="ibox-tools">
+            <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="#" class="dropdown-item">Config option 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Config option 2</a>
+                </li>
+            </ul>
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td><a asp-action="Delete" asp-area="admin" asp-controller="Role" asp-route-Id="@item.Id" class="btn btn-danger">Delete</a></td>
+                        <td><a asp-action="Update" asp-area="admin" asp-controller="Role" asp-route-Id="@item.Id" class="btn btn-primary">Update</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

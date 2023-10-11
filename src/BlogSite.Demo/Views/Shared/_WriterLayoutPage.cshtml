@@ -3,6 +3,7 @@
 }
 <!DOCTYPE html>
 <html lang="en">
+    @await RenderSectionAsync("css",false)
 @await Html.PartialAsync("/Views/Shared/WriterLayoutPartial/PartialHead.cshtml")
 <body>
     <div class="container-scroller">
@@ -32,5 +33,7 @@
     @await Html.PartialAsync("/Views/Shared/WriterLayoutPartial/PartialJs.cshtml")
 
     <!-- End custom js for this page -->
+    @await RenderSectionAsync("scripts",false)
+
 </body>
 </html>

@@ -7,9 +7,9 @@
 @model Message2
 <div class="container">
     <img style="height:200px;width:200px;" src="~/@Model.Sender?.Image" />
-    <h1>Sender: @Model.Sender?.NameSurname</h1>
+    <h1>Sender: @Model.Sender?.NameSurname?</h1>
     <hr />
-    <h3>Subject: @Model.Subject </h3>
+    <h3>Subject: @Model.Subject? </h3>
     <h5>
         Message: <br />
         @Model.Details
