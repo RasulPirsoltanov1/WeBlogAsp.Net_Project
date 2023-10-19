@@ -2,6 +2,7 @@
 using BlogSite.BusinessLayer.Concrete;
 using BlogSite.BusinessLayer.Extensions;
 using BlogSite.DataAccessLayer.Context;
+using BlogSite.Demo.Models;
 using BlogSite.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,13 +16,14 @@ namespace BlogSite.Demo.Controllers
         ICountryService _countryService;
         UserManager<AppUser> _userManager;
         AppDbContext _appDbContext;
-
-        public WriterController(IWriterService writerService, ICountryService countryService, UserManager<AppUser> userManager, AppDbContext appDbContext)
+        SignInManager<AppUser> _signInManager;
+        public WriterController(IWriterService writerService, ICountryService countryService, UserManager<AppUser> userManager, AppDbContext appDbContext, SignInManager<AppUser> signInManager)
         {
             _writerService = writerService;
             _countryService = countryService;
             _userManager = userManager;
             _appDbContext = appDbContext;
+            _signInManager = signInManager;
         }
 
         public IActionResult Index()
@@ -64,7 +66,8 @@ namespace BlogSite.Demo.Controllers
                     }
                 }
                 await _userManager.UpdateAsync(dbUser);
-                await _appDbContext.SaveChangesAsync();
+                await _appDbContext.SaveChangesAsync(); var user = await _userManager.FindByNameAsync(dbUser.UserName);
+                await _signInManager.SignInAsync(user,false);
                 return RedirectToAction("Index", "Dashboard");
             }
             ViewBag.Countries = await _countryService.GetAllAsync();

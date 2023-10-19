@@ -1,14 +1,23 @@
 ﻿@using BlogSite.EntityLayer.Concrete;
 @model Blog
-<div class="comment-top">
-	<h4>Leave a Comment</h4>
-	<div class="comment-bottom">
-		<form asp-action="PartialViewAddComment" asp-controller="Comment" method="post">
-			<input hidden value="@Model?.Id" name="BlogId"/>
-			<input class="form-control" type="text" name="UserName" placeholder="UserName" required="">
-			<input class="form-control" type="text" name="Title" placeholder="Title" required="">
-			<textarea class="form-control" name="Content" placeholder="Content...." required=""></textarea>
-			<button type="submit" class="btn btn-primary submit">Submit</button>
-		</form>
-	</div>
-</div>
+
+@if (User?.Identity?.Name != null)
+{
+    <div class="comment-top">
+        <h4>Leave a Comment</h4>
+        <div class="comment-bottom">
+            <form asp-action="PartialViewAddComment" asp-controller="Comment" method="post">
+                <input hidden value="@Model?.Id" name="BlogId" />
+                <input class="form-control" type="text" name="Title" placeholder="Title" required="">
+                <textarea class="form-control" name="Content" placeholder="Content...." required=""></textarea>
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+        </div>
+    </div>
+}
+else
+{
+    <div class="comment-top">
+        <h4>Register if fou want leave a comment... </h4>
+    </div>
+}

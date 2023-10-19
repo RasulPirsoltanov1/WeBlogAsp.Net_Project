@@ -36,17 +36,24 @@ namespace BlogSite.Demo.Controllers
         [HttpPost]
         public async Task<IActionResult> SendMessage(MailVM mailVM)
         {
-            var userReceiver = await _userManager.FindByEmailAsync(mailVM.Email);
-            var userSender = await _userManager.FindByNameAsync(User?.Identity?.Name);
-            await _message2Service.AddAsync(new Message2
+            try
             {
-                RecieverId = userReceiver.Id,
-                Status = true,
-                Subject = mailVM.Subject ?? "Empty",
-                Details = mailVM.Content ?? "Empty",
-                SenderId = userSender.Id
-            });
-            return RedirectToAction(nameof(Index));
+                var userReceiver = await _userManager.FindByEmailAsync(mailVM.Email);
+                var userSender = await _userManager.FindByNameAsync(User?.Identity?.Name);
+                await _message2Service.AddAsync(new Message2
+                {
+                    RecieverId = userReceiver.Id,
+                    Status = true,
+                    Subject = mailVM.Subject ?? "Empty",
+                    Details = mailVM.Content ?? "Empty",
+                    SenderId = userSender.Id
+                });
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction(nameof(Index));
+            }
         }
     }
 }

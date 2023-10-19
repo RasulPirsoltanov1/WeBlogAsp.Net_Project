@@ -1,0 +1,17 @@
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Release\net6.0\BlogSite.DataAccessLayer.deps.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Release\net6.0\BlogSite.DataAccessLayer.runtimeconfig.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Release\net6.0\BlogSite.DataAccessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Release\net6.0\BlogSite.DataAccessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Release\net6.0\BlogSite.EntityLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\bin\Release\net6.0\BlogSite.EntityLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.AssemblyInfo.cs
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.csproj.CopyComplete
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\refint\BlogSite.DataAccessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\BlogSite.DataAccessLayer.genruntimeconfig.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.DataAccessLayer\obj\Release\net6.0\ref\BlogSite.DataAccessLayer.dll

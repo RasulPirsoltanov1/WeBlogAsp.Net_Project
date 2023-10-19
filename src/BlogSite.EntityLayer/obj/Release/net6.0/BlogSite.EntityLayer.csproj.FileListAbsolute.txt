@@ -1,0 +1,12 @@
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\bin\Release\net6.0\BlogSite.EntityLayer.deps.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\bin\Release\net6.0\BlogSite.EntityLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\bin\Release\net6.0\BlogSite.EntityLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\BlogSite.EntityLayer.csproj.AssemblyReference.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\BlogSite.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\BlogSite.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\BlogSite.EntityLayer.AssemblyInfo.cs
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\BlogSite.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\BlogSite.EntityLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\refint\BlogSite.EntityLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\BlogSite.EntityLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.EntityLayer\obj\Release\net6.0\ref\BlogSite.EntityLayer.dll

@@ -51,7 +51,9 @@
                         </p>
                         <a href="single.html" class="btn btn-primary read-m">Read More</a>
                     </div>
-                    @await Html.PartialAsync("/Views/Comment/PartialViewCommentList.cshtml")
+                    @await Component.InvokeAsync("BlogCommentListComponent", new {
+                        id=Model.Id
+                    })
                     @await Html.PartialAsync("/Views/Comment/PartialViewAddComment.cshtml",Model)
 
 

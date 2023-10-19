@@ -1,17 +1,20 @@
 ﻿@using BlogSite.EntityLayer.Concrete;
 @model Blog
 
+<script>
 
+    console.log(@ViewBag.Comments);
+</script>
 
 
 <div class="comment-top">
-    @if (Model.Comments.Count>0)
+    @if (ViewBag.Comments!=null )
     {
         <h4>Comments</h4>
-        @foreach (var item in Model.Comments)
+        @foreach (var item in (List<Comment>)ViewBag.Comments)
         {
             <div class="media">
-                <img src="~/web/images/t1.jpg" alt="" class="img-fluid" />
+                <img src="~/@Model.Writer?.Image" alt="" class="img-fluid" />
                 <div class="media-body">
                     <h5 class="mt-0">@item.UserName</h5>
                     <p>

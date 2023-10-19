@@ -27,5 +27,8 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
+	<PropertyGroup>
+		<ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>
 
 </Project>

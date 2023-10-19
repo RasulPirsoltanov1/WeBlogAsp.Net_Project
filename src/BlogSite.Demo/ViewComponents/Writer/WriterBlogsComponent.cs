@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogSite.Demo.ViewComponents.Writer
 {
-	public class WriterBlogsComponent: ViewComponent
-	{
-		IBlogService _blogService;
+    public class WriterBlogsComponent : ViewComponent
+    {
+        IBlogService _blogService;
         UserManager<AppUser> _userManager;
 
         public WriterBlogsComponent(IBlogService blogService, UserManager<AppUser> userManager)
@@ -18,18 +18,11 @@ namespace BlogSite.Demo.ViewComponents.Writer
         }
 
         public async Task<IViewComponentResult> InvokeAsync(int writerId)
-		{
+        {
 
-            if (User?.Identity?.Name != null)
-            {
-                var user = await _userManager.FindByNameAsync(User?.Identity?.Name);
-                if (user != null)
-                {
-                    var blogs = await _blogService.values.Where(x => x.WriterId == user.Id).ToListAsync();
-                    return View(blogs);
-                }
-            }
-            return View(new List<BlogSite.EntityLayer.Concrete.Blog>() { });
+            var blogs = await _blogService.values.Take(3).OrderByDescending(x=>x.CreateDate).Include(x => x.Comments).ToListAsync();
+            return View(blogs);
+            //return View(new List<BlogSite.EntityLayer.Concrete.Blog>() { });
         }
-	}
+    }
 }

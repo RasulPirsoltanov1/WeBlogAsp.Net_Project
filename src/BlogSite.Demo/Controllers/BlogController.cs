@@ -16,12 +16,14 @@ namespace BlogSite.Demo.Controllers
         ICategoryService _categoryService;
         IWriterService _writerService;
         UserManager<AppUser> _userManager;
-        public BlogController(IBlogService blogService, IWriterService writerService, ICategoryService categoryService, UserManager<AppUser> userManager)
+        ICommentService _commentService;
+        public BlogController(IBlogService blogService, IWriterService writerService, ICategoryService categoryService, UserManager<AppUser> userManager, ICommentService commentService)
         {
             _blogService = blogService;
             _writerService = writerService;
             _categoryService = categoryService;
             _userManager = userManager;
+            _commentService = commentService;
         }
         [AllowAnonymous]
         public async Task<IActionResult> Index()
@@ -32,6 +34,7 @@ namespace BlogSite.Demo.Controllers
         public async Task<IActionResult> Detail(int id)
         {
             return View(await _blogService.GetBlogByIdWithCommentsAsync(id));
+          
         }
         public async Task<IActionResult> BlogListByWriter(string? email)
         {

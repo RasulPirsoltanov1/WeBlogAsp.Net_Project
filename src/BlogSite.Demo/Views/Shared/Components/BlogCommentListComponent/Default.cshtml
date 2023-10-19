@@ -1,0 +1,26 @@
+﻿@using BlogSite.EntityLayer.Concrete;
+@model List<Comment>
+
+<div class="comment-top">
+    @if (Model != null)
+    {
+        <h4>Comments</h4>
+        @foreach (var item in Model)
+        {
+            <div class="media">
+                <img src="~/@item.AppUser?.Image" style="width:5rem;height:5rem; border-radius:100%;" alt="@item.UserName" class="img-fluid" />
+                <div class="media-body">
+                    <h5 class="mt-0">@item.UserName</h5>
+                    <p>
+                        @item.Content
+                    </p>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <h4>Have not any comments</h4>
+    }
+
+</div>

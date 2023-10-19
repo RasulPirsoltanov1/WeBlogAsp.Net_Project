@@ -1,0 +1,17 @@
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Release\net6.0\BlogSite.BusinessLayer.deps.json
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Release\net6.0\BlogSite.BusinessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Release\net6.0\BlogSite.BusinessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Release\net6.0\BlogSite.DataAccessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Release\net6.0\BlogSite.EntityLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Release\net6.0\BlogSite.DataAccessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\bin\Release\net6.0\BlogSite.EntityLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.AssemblyInfo.cs
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.csproj.CopyComplete
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\refint\BlogSite.BusinessLayer.dll
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\BlogSite.BusinessLayer.pdb
+C:\Users\resul\OneDrive\Masaüstü\Projects\BlogSite\src\BlogSite.BusinessLayer\obj\Release\net6.0\ref\BlogSite.BusinessLayer.dll
